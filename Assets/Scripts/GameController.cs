@@ -8,13 +8,15 @@ using TMPro;
 public class GameController : MonoBehaviour
 {
 
-    public enum GameState { Start, Generating, Buying, Battle, Busy, End}
+    public enum GameState { Start, Generating, Buying, Battle, Busy, End, Map}
 
     GameState state;
 
     public GameObject startMenu;
     public GameObject cardsMenu;
     public GameObject endMenu;
+
+    public Map map;
 
     public UnitCardContainer cardContainer;
 
@@ -23,8 +25,8 @@ public class GameController : MonoBehaviour
 
     public Player player;
 
-    public int level = 1;
-    public int maxLevel = 12;
+    public int level = 0;
+    public int maxLevel = 13;
 
     public TextMeshProUGUI battleText;
 
@@ -56,25 +58,23 @@ public class GameController : MonoBehaviour
         
     }
 
+    public void OpenMap()
+    {
+        state = GameState.Map;
+
+        map.ClearedMapNodes();
+
+        map.gameObject.SetActive(true);
+    }
+
     public void StartGame()
     {
 
-        state = GameState.Generating;
+        state = GameState.Map;
 
-        player.level = level;
-        player.GainGold(6);
+        map.CreateMap();
 
-        GenerateEnemyParty();
-
-        state = GameState.Buying;
-
-        battleText.text = "Battle " + "(" + level + "/" + maxLevel + ")";
-
-        cardsMenu.SetActive(true);
-
-        startMenu.SetActive(false);
-
-        EnableDragging();
+        OpenMap();
 
     }
 
@@ -125,17 +125,18 @@ public class GameController : MonoBehaviour
 
     public void BattleOver()
     {
-
-        GoNextLevel();
-        PauseUnits();
-    }
-
-    void GoNextLevel()
-    {
-        enemyParty.ClearUnits();
-
         level++;
         player.level = level;
+        OpenMap();
+        PauseUnits();
+
+    }
+
+    public void GoNextLevel()
+    {
+        map.gameObject.SetActive(false);
+
+        enemyParty.ClearUnits();
 
         if (level > maxLevel)
         {
@@ -157,8 +158,6 @@ public class GameController : MonoBehaviour
             state = GameState.Buying;
 
             battleText.text = "Battle " + "(" + level + "/" + maxLevel + ")";
-
-            cardContainer.Reroll(true);
 
             if (level >=  13)
             {
@@ -184,12 +183,19 @@ public class GameController : MonoBehaviour
             {
                 player.GainGold(2);
             }
+            else if (level >= 1)
+            {
+                player.GainGold(6);
+            }
 
             cardsMenu.SetActive(true);
 
             startMenu.SetActive(false);
 
             EnableDragging();
+
+            cardContainer.Reroll(true);
+
         }
 
 

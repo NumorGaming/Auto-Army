@@ -135,18 +135,17 @@ public class Party : MonoBehaviour
 
         Profession getProf = InformationDatabase.i.profList[number2];
 
-        Debug.Log(player.level);
 
         if (CheckIfPriceIsWrong(getSpecies.cost + getProf.cost))
         {
-            Debug.Log("hi");
+            
 
             CreateRandomUnit();
             return;
         }
         else
         {
-            Debug.Log("hi3");
+            
 
             unit.spr = getSpecies.spr;
             unit.speciesName = getSpecies.name;

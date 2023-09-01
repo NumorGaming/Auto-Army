@@ -13,6 +13,10 @@ public class InformationDatabase : MonoBehaviour
 
     public List<string> namesList;
 
+    public List<GameObject> bossesList;
+
+    public List<Environment> environmentList;
+
     // Start is called before the first frame update
     private void Awake()
     {
