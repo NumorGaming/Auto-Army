@@ -40,11 +40,11 @@ public class UnitCard : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
     {
         if (player.level >= 13)
         {
-            return false;
+            if (cost < 5) return true;
         }
         else if (player.level >= 12)
         {
-            return false;
+            if (cost < 4) return true;
         }
         else if (player.level >= 9)
         {
@@ -70,6 +70,7 @@ public class UnitCard : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
         return false;
 
     }
+
 
     public void GenerateUnit()
     {
