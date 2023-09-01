@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e17ea81dadf7bf24cacd7726bd49f2b6, type: 3}
+  m_Name: Shock Aoe
+  m_EditorClassIdentifier: 
+  description: Shock in an aoe around your current target.
+  type: 2
+  target: 1
+  extraTargets: 0
+  range: 0
+  damageByPowerMultiple: 0
+  healAmount: 0
+  aoe: 5
+  animation: {fileID: 1902250454826159191, guid: d60648d24053a7d43a7cfb0cc79eeb2d, type: 3}
+  status:
+    name: Shock
+    description: Deal 5 damage every second for 5 seconds.
+    status: 3
+    statusTime: 5
+    statusTimer: 0
+    ticTime: 1
+    ticTimer: 0
+    ticDamage: 5
+    critDamage: 0
+    critChance: 0
+    moveSpeed: 0
+    power: 0
+    def: 0
+    lifesteal: 0
+    actionSpeed: 0

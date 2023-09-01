@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e17ea81dadf7bf24cacd7726bd49f2b6, type: 3}
+  m_Name: Full Lifesteal
+  m_EditorClassIdentifier: 
+  description: Grant lifesteal to all your allies.
+  type: 2
+  target: 7
+  extraTargets: 0
+  range: 0
+  damageByPowerMultiple: 0
+  healAmount: 0
+  aoe: 0
+  status:
+    name: Lifesteal
+    description: +0.2 lifesteal for 5 seconds.
+    status: 17
+    statusTime: 5
+    statusTimer: 0
+    ticTime: 0
+    ticTimer: 0
+    ticDamage: 0
+    critDamage: 0
+    critChance: 0
+    moveSpeed: 0
+    power: 0
+    def: 0
+    lifesteal: 0.2
+    actionSpeed: 0
