@@ -134,8 +134,7 @@ public class GameController : MonoBehaviour
 
     public void GoNextLevel()
     {
-        map.gameObject.SetActive(false);
-
+        
         enemyParty.ClearUnits();
 
         if (level > maxLevel)
@@ -195,6 +194,10 @@ public class GameController : MonoBehaviour
             EnableDragging();
 
             cardContainer.Reroll(true);
+
+            map.OpenEnvironments();
+
+            map.gameObject.SetActive(false);
 
         }
 
