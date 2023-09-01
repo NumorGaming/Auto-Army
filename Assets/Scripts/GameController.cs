@@ -61,6 +61,9 @@ public class GameController : MonoBehaviour
 
         state = GameState.Generating;
 
+        player.level = level;
+        player.GainGold(6);
+
         GenerateEnemyParty();
 
         state = GameState.Buying;
@@ -72,9 +75,6 @@ public class GameController : MonoBehaviour
         startMenu.SetActive(false);
 
         EnableDragging();
-
-        player.level = level;
-        player.GainGold(6);
 
     }
 

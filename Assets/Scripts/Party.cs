@@ -88,6 +88,41 @@ public class Party : MonoBehaviour
         units.Add(newUnitUnit);
     }
 
+    bool CheckIfPriceIsWrong(int cost)
+    {
+        if (player.level >= 13)
+        {
+            return false;
+        }
+        else if (player.level >= 12)
+        {
+            return false;
+        }
+        else if (player.level >= 9)
+        {
+            if (cost > 5 || cost < 3) return true;
+        }
+        else if (player.level >= 6)
+        {
+            if (cost > 4 || cost < 2) return true;
+        }
+        else if (player.level >= 3)
+        {
+            if (cost > 3 || cost < 1) return true;
+        }
+        else if (player.level >= 2)
+        {
+            if (cost > 3) return true;
+        }
+        else if (player.level >= 1)
+        {
+            if (cost > 2) return true;
+        }
+
+        return false;
+
+    }
+
     public void CreateRandomUnit()
     {
         Unit unit = new Unit();
@@ -96,51 +131,67 @@ public class Party : MonoBehaviour
 
         Species getSpecies = InformationDatabase.i.speciesList[number];
 
-        unit.spr = getSpecies.spr;
-        unit.speciesName = getSpecies.name;
-        unit.speciesDes = getSpecies.description;
-        unit.power += getSpecies.power;
-        unit.def += getSpecies.def;
-        unit.actionSpeed += getSpecies.actionSpeed;
-        unit.epGain += getSpecies.epGain;
-        unit.range += getSpecies.range;
-        unit.moveSpeed += getSpecies.moveSpeed;
-        unit.maxHP += getSpecies.hp;
-        unit.maxEP += getSpecies.ep;
-        unit.passive = getSpecies.passive;
-        spawnUnitCost += getSpecies.cost;
-
         int number2 = Random.Range(0, InformationDatabase.i.profList.Count);
 
         Profession getProf = InformationDatabase.i.profList[number2];
 
-        unit.profName = getProf.name;
-        unit.profDes = getProf.description;
-        unit.power += getProf.power;
-        unit.def += getProf.def;
-        unit.actionSpeed += getProf.actionSpeed;
-        unit.epGain += getProf.epGain;
-        unit.range += getProf.range;
-        unit.moveSpeed += getProf.moveSpeed;
-        unit.maxHP += getProf.hp;
-        unit.maxEP += getProf.ep;
-        spawnUnitCost += getProf.cost;
+        Debug.Log(player.level);
 
-        if (getProf.projectile != null)
+        if (CheckIfPriceIsWrong(getSpecies.cost + getProf.cost))
         {
-            unit.projectile = getProf.projectile;
-        }
+            Debug.Log("hi");
 
-        if (getProf.active != null)
+            CreateRandomUnit();
+            return;
+        }
+        else
         {
-            unit.active = getProf.active;
+            Debug.Log("hi3");
+
+            unit.spr = getSpecies.spr;
+            unit.speciesName = getSpecies.name;
+            unit.speciesDes = getSpecies.description;
+            unit.power += getSpecies.power;
+            unit.def += getSpecies.def;
+            unit.actionSpeed += getSpecies.actionSpeed;
+            unit.epGain += getSpecies.epGain;
+            unit.range += getSpecies.range;
+            unit.moveSpeed += getSpecies.moveSpeed;
+            unit.maxHP += getSpecies.hp;
+            unit.maxEP += getSpecies.ep;
+            unit.passive = getSpecies.passive;
+            spawnUnitCost += getSpecies.cost;
+
+
+
+            unit.profName = getProf.name;
+            unit.profDes = getProf.description;
+            unit.power += getProf.power;
+            unit.def += getProf.def;
+            unit.actionSpeed += getProf.actionSpeed;
+            unit.epGain += getProf.epGain;
+            unit.range += getProf.range;
+            unit.moveSpeed += getProf.moveSpeed;
+            unit.maxHP += getProf.hp;
+            unit.maxEP += getProf.ep;
+            spawnUnitCost += getProf.cost;
+
+            if (getProf.projectile != null)
+            {
+                unit.projectile = getProf.projectile;
+            }
+
+            if (getProf.active != null)
+            {
+                unit.active = getProf.active;
+            }
+
+            int number3 = Random.Range(0, InformationDatabase.i.namesList.Count);
+
+            unit.unitName = InformationDatabase.i.namesList[number3];
+
+            SpawnUnit(unit);
         }
-
-        int number3 = Random.Range(0, InformationDatabase.i.namesList.Count);
-
-        unit.unitName = InformationDatabase.i.namesList[number3];
-
-        SpawnUnit(unit);
 
     }
 

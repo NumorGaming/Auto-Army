@@ -36,113 +36,122 @@ public class UnitCard : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
 
     }
 
+    bool CheckIfPriceIsWrong(int cost)
+    {
+        if (player.level >= 13)
+        {
+            return false;
+        }
+        else if (player.level >= 12)
+        {
+            return false;
+        }
+        else if (player.level >= 9)
+        {
+            if (cost > 5 || cost < 3) return true;
+        }
+        else if (player.level >= 6)
+        {
+            if (cost > 4 || cost < 2) return true;
+        }
+        else if (player.level >= 3)
+        {
+            if (cost > 3 || cost < 1) return true;
+        }
+        else if (player.level >= 2)
+        {
+            if (cost > 3) return true;
+        }
+        else if (player.level >= 1)
+        {
+            if (cost > 2) return true;
+        }
+
+        return false;
+
+    }
+
     public void GenerateUnit()
     {
         unit = new Unit();
         cost = 0;
 
         int number = Random.Range(0, InformationDatabase.i.speciesList.Count);
-
-        Species getSpecies = InformationDatabase.i.speciesList[number];
-
-        unit.spr = getSpecies.spr;
-        unit.speciesDes = getSpecies.description;
-        unit.speciesName = getSpecies.name;
-        unit.power += getSpecies.power;
-        unit.def += getSpecies.def;
-        unit.actionSpeed += getSpecies.actionSpeed;
-        unit.epGain += getSpecies.epGain;
-        unit.range += getSpecies.range;
-        unit.moveSpeed += getSpecies.moveSpeed;
-        unit.maxHP += getSpecies.hp;
-        unit.maxEP += getSpecies.ep;
-        unit.passive = getSpecies.passive;
-        cost += getSpecies.cost;
-
         int number2 = Random.Range(0, InformationDatabase.i.profList.Count);
 
+        Species getSpecies = InformationDatabase.i.speciesList[number];
         Profession getProf = InformationDatabase.i.profList[number2];
 
-        unit.profName = getProf.name;
-        unit.profDes = getProf.description;
-        unit.power += getProf.power;
-        unit.def += getProf.def;
-        unit.actionSpeed += getProf.actionSpeed;
-        unit.epGain += getProf.epGain;
-        unit.range += getProf.range;
-        unit.moveSpeed += getProf.moveSpeed;
-        unit.maxHP += getProf.hp;
-        unit.maxEP += getProf.ep;
-       
-        cost += getProf.cost;
-
-        if (getSpecies.passive.costAmount > 0)
+        if (CheckIfPriceIsWrong(getSpecies.cost + getProf.cost))
         {
-            cost = Mathf.RoundToInt(cost * getSpecies.passive.costAmount);
+            GenerateUnit();
+            return;
         }
-
-        if (getSpecies.passive.flatCostReduction > 0)
+        else
         {
-            cost -= getSpecies.passive.flatCostReduction;
+            unit.spr = getSpecies.spr;
+            unit.speciesDes = getSpecies.description;
+            unit.speciesName = getSpecies.name;
+            unit.power += getSpecies.power;
+            unit.def += getSpecies.def;
+            unit.actionSpeed += getSpecies.actionSpeed;
+            unit.epGain += getSpecies.epGain;
+            unit.range += getSpecies.range;
+            unit.moveSpeed += getSpecies.moveSpeed;
+            unit.maxHP += getSpecies.hp;
+            unit.maxEP += getSpecies.ep;
+            unit.passive = getSpecies.passive;
+            cost += getSpecies.cost;
+
+
+            unit.profName = getProf.name;
+            unit.profDes = getProf.description;
+            unit.power += getProf.power;
+            unit.def += getProf.def;
+            unit.actionSpeed += getProf.actionSpeed;
+            unit.epGain += getProf.epGain;
+            unit.range += getProf.range;
+            unit.moveSpeed += getProf.moveSpeed;
+            unit.maxHP += getProf.hp;
+            unit.maxEP += getProf.ep;
+
+            cost += getProf.cost;
+
+            if (getSpecies.passive.costAmount > 0)
+            {
+                cost = Mathf.RoundToInt(cost * getSpecies.passive.costAmount);
+            }
+
+            if (getSpecies.passive.flatCostReduction > 0)
+            {
+                cost -= getSpecies.passive.flatCostReduction;
+            }
+
+            if (getProf.projectile != null)
+            {
+                unit.projectile = getProf.projectile;
+            }
+
+            if (getProf.active != null)
+            {
+                unit.active = getProf.active;
+            }
+
+            int number3 = Random.Range(0, InformationDatabase.i.namesList.Count);
+
+
+
+            unit.unitName = InformationDatabase.i.namesList[number3];
+
+            ;
+
+            image.sprite = unit.spr;
+            image.SetNativeSize();
+            speciesText.text = unit.speciesName;
+            profText.text = unit.profName;
+            nameText.text = unit.unitName;
+            costText.text = "Cost: " + cost.ToString();
         }
-
-        if (getProf.projectile != null)
-        {
-            unit.projectile = getProf.projectile;
-        }
-
-        if (getProf.active != null)
-        {
-            unit.active = getProf.active;
-        }
-
-        int number3 = Random.Range(0, InformationDatabase.i.namesList.Count);
-
-  
-
-        unit.unitName = InformationDatabase.i.namesList[number3];
-
-;
-
-        image.sprite = unit.spr;
-        image.SetNativeSize();
-        speciesText.text = unit.speciesName;
-        profText.text = unit.profName;
-        nameText.text = unit.unitName;
-        costText.text = "Cost: " + cost.ToString();
-
-
-        if (player.level >= 13)
-        {
-            //all good
-        }
-        else if (player.level >= 12)
-        {
-            //all good
-        }
-        else if (player.level >= 9)
-        {
-            if (cost > 5 || cost < 3) GenerateUnit();
-        }
-        else if (player.level >= 6)
-        {
-            if (cost > 4 || cost < 2) GenerateUnit();
-        }
-        else if (player.level >= 3)
-        {
-            if (cost > 3 || cost < 1) GenerateUnit();
-        }
-        else if (player.level >= 2)
-        {
-            if (cost > 3) GenerateUnit();
-        }
-        else if (player.level >= 1)
-        {
-            if (cost > 2) GenerateUnit();
-        }
-
-
-
 
     }
 
