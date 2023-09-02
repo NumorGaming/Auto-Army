@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb3d33f135f9e4140a3eb5de08c7c65a, type: 3}
+  m_Name: Shock Dagger
+  m_EditorClassIdentifier: 
+  spr: {fileID: 1665661080, guid: 71a4ecb3b21d86d4692f4cc2d7bc1725, type: 3}

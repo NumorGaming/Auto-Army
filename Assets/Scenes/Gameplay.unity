@@ -72894,7 +72894,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: db48d298b78f8814d99aa2a84a88df10, type: 2}
     weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
-    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
+    hat: {fileID: 11400000, guid: 1632c7e58cfda31479c8289b90045c23, type: 2}
   - name: Berzerker
     description: Berzerkers are known for their rage powers.
     hp: 22
@@ -72908,8 +72908,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: bd2aa8a3c5ced504195c819741ea62b3, type: 2}
-    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
-    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
+    weapon: {fileID: 11400000, guid: 441774f602530f84da66c4581330a628, type: 2}
+    hat: {fileID: 11400000, guid: 9bda02474a9c6484298d13fb341d632d, type: 2}
   - name: Defender
     description: Defenders are armorclad as frick.
     hp: 30
@@ -72923,8 +72923,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: f439d76f523d8b444a31179ac7fd7087, type: 2}
-    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
-    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
+    weapon: {fileID: 11400000, guid: a37c4f51a6db7da46843d3c5e62aac8e, type: 2}
+    hat: {fileID: 11400000, guid: 8272e28cdce06af429d77d2c9c380be1, type: 2}
   - name: Fire Mage
     description: Fire Mages use fire magic.
     hp: 5
@@ -72938,7 +72938,7 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 1902250454826159191, guid: 082719f133f6f044dbf0b105377514a1, type: 3}
     active: {fileID: 11400000, guid: e0aa5a2fe608a9446b843485a939cf3b, type: 2}
-    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
+    weapon: {fileID: 11400000, guid: 5c8436df85b4cf249b325e3f28d4ee05, type: 2}
     hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
   - name: Shock Mage
     description: Shock Mages use lightning magic.
@@ -72953,8 +72953,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 1902250454826159191, guid: 082719f133f6f044dbf0b105377514a1, type: 3}
     active: {fileID: 11400000, guid: f55e6f13b9cf97a468dd6ea2fa31e2cd, type: 2}
-    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
-    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
+    weapon: {fileID: 11400000, guid: 10c48cdcf13ad334d981ca76cac11928, type: 2}
+    hat: {fileID: 11400000, guid: 5a4cbdb2ad131c845bececf9e3dfdfaf, type: 2}
   - name: Dark Mage
     description: Dark Mages are one with darkness.
     hp: 8
@@ -72968,8 +72968,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 1902250454826159191, guid: 082719f133f6f044dbf0b105377514a1, type: 3}
     active: {fileID: 11400000, guid: 67ea83becfe1e2a4f806c92ccd5d65a3, type: 2}
-    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
-    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
+    weapon: {fileID: 11400000, guid: 7fec93585f86bdd4daf0a1a00c095256, type: 2}
+    hat: {fileID: 11400000, guid: 006f8e7e701f00a4ebb79eb1b84c1a8e, type: 2}
   - name: Frost Mage
     description: Frost Mages are one with the cold.
     hp: 10
@@ -72983,8 +72983,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 1902250454826159191, guid: 082719f133f6f044dbf0b105377514a1, type: 3}
     active: {fileID: 11400000, guid: 1174955c9634e3e46bd3ddbb4d85bd77, type: 2}
-    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
-    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
+    weapon: {fileID: 11400000, guid: 47635213bc021fd41bbb617888dede0a, type: 2}
+    hat: {fileID: 11400000, guid: 63af5bb68997fef419b1b8a24d4b6002, type: 2}
   - name: Blood Mage
     description: Blood Mages are one with blood.
     hp: 13
@@ -72998,8 +72998,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: fe4e8ae5b5ee0214ea5af208064efc13, type: 2}
-    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
-    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
+    weapon: {fileID: 11400000, guid: 2568573fb3d4a38488193b581ad0e00a, type: 2}
+    hat: {fileID: 11400000, guid: 3198a968d2e2f2148a5ad8a803d1bb18, type: 2}
   - name: Brawler
     description: Brawlers use their first to knock out opponents.
     hp: 12
@@ -73013,8 +73013,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: ebbc21eb36da2b74db3156968b8945f5, type: 2}
-    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
-    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Medic
     description: Medics heal their allies.
     hp: 8
@@ -73028,7 +73028,7 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: f1b7ce9493014bc4eb346ee20bce3606, type: 2}
-    weapon: {fileID: 0}
+    weapon: {fileID: 11400000, guid: 630f1d39dd05f934d89020c296e4261a, type: 2}
     hat: {fileID: 0}
   - name: Cultist
     description: Cultists use demonic magic to heal themselves.
@@ -73043,8 +73043,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 4b97fc9a4c038e34c854ccef980c5737, type: 2}
-    weapon: {fileID: 0}
-    hat: {fileID: 0}
+    weapon: {fileID: 11400000, guid: a8c8816a9e05ee94e9b4c4127f0dccca, type: 2}
+    hat: {fileID: 11400000, guid: 07a38852ffc979a4da16da9397f1caf4, type: 2}
   - name: Rogue
     description: Rogues cut their opponents.
     hp: 12
@@ -73058,7 +73058,7 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 787b3a92077c60b439635ee175ee1566, type: 2}
-    weapon: {fileID: 0}
+    weapon: {fileID: 11400000, guid: b12425c6230caee439cb7cd9e7113517, type: 2}
     hat: {fileID: 0}
   - name: Darkblade
     description: Darkblades enhanced their weaponry with dark magic.
@@ -73073,7 +73073,7 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: c1bc8e655714d8142927ddd6f6c29a20, type: 2}
-    weapon: {fileID: 0}
+    weapon: {fileID: 11400000, guid: c78393adea2a37f4dae02b074560a742, type: 2}
     hat: {fileID: 0}
   - name: Flameblade
     description: Darkblades enhanced their weaponry with fire magic.
@@ -73088,7 +73088,7 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 60a40a089d47bd44d91116abcb3873b2, type: 2}
-    weapon: {fileID: 0}
+    weapon: {fileID: 11400000, guid: 622390e1d0b48c64d92956ef2b9f015d, type: 2}
     hat: {fileID: 0}
   - name: Shockblade
     description: Darkblades enhanced their weaponry with lightning magic.
@@ -73103,7 +73103,7 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 15f2dc60b8b147a4cb8178eefc89c554, type: 2}
-    weapon: {fileID: 0}
+    weapon: {fileID: 11400000, guid: b2662c81a0585304797a0884d96edeb2, type: 2}
     hat: {fileID: 0}
   - name: Bloodblade
     description: Darkblades enhanced their weaponry with blood magic.
@@ -73118,7 +73118,7 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: bdae996c93f5cbe4f9a7c2ac54b35826, type: 2}
-    weapon: {fileID: 0}
+    weapon: {fileID: 11400000, guid: e110ba5ba340ee046a904d4898ab7e15, type: 2}
     hat: {fileID: 0}
   - name: Lancer
     description: Lancers use their lance to hit in a wide range.
@@ -73133,7 +73133,7 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 890a5be4963a028409f98fa9a4071f13, type: 2}
-    weapon: {fileID: 0}
+    weapon: {fileID: 11400000, guid: 67ec5980e8c937443a5315c75fe48552, type: 2}
     hat: {fileID: 0}
   - name: Illusionist
     description: Illusionists confuse their opponents.
@@ -73149,7 +73149,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: f89eb3616e260bd4ca64d7aa81ca7af4, type: 2}
     weapon: {fileID: 0}
-    hat: {fileID: 0}
+    hat: {fileID: 11400000, guid: b3a93b1d575e466498f43afec1f85fcd, type: 2}
   - name: Archer
     description: Archers use their range to their advantage.
     hp: 2
@@ -73163,8 +73163,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 1902250454826159191, guid: 082719f133f6f044dbf0b105377514a1, type: 3}
     active: {fileID: 11400000, guid: 24e010ade8129fa44ad7f178931a5938, type: 2}
-    weapon: {fileID: 0}
-    hat: {fileID: 0}
+    weapon: {fileID: 11400000, guid: 423e29e68f006554aac97505280031b8, type: 2}
+    hat: {fileID: 11400000, guid: 07bb05cb3d511fc4e85dd156bc0877b6, type: 2}
   - name: Cleric
     description: Clerics heal their allies around them.
     hp: 15
@@ -73179,7 +73179,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 2323dd4ab1b82414e9a140e864ef0abc, type: 2}
     weapon: {fileID: 0}
-    hat: {fileID: 0}
+    hat: {fileID: 11400000, guid: a15a30af4183e114993169910e36abd4, type: 2}
   - name: Psionic
     description: Psionics use their mind to charm their enemies
     hp: 8
@@ -73193,7 +73193,7 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 473be02a3bb71a443bae5a2334b3f075, type: 2}
-    weapon: {fileID: 0}
+    weapon: {fileID: 11400000, guid: 27d5a69822a075e439748c62193514d7, type: 2}
     hat: {fileID: 0}
   - name: Swashbuckler
     description: Swashbuckers crack the armor of their enemies.
@@ -73208,7 +73208,7 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 24055b32442481f40a8d40a2cef7ac24, type: 2}
-    weapon: {fileID: 0}
+    weapon: {fileID: 11400000, guid: 37db473b5e60c9847a3443b44558ab85, type: 2}
     hat: {fileID: 0}
   - name: Duelist
     description: Duelists disarm their enemies.
@@ -73223,7 +73223,7 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 72a0a0c858c87eb469029a05bb4a228d, type: 2}
-    weapon: {fileID: 0}
+    weapon: {fileID: 11400000, guid: 55d46b6b48c17854ca1d41d045d0539e, type: 2}
     hat: {fileID: 0}
   - name: Bard
     description: Bards make their allies dance.
@@ -73239,7 +73239,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 571117f9294c93b4894bf9395fd59bb1, type: 2}
     weapon: {fileID: 0}
-    hat: {fileID: 0}
+    hat: {fileID: 11400000, guid: 198894bafc89d3a4995583aa00b0b0b3, type: 2}
   - name: Knight
     description: Knights have powerful armor and strike hard.
     hp: 25
@@ -73253,8 +73253,8 @@ MonoBehaviour:
     cost: 2
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 801cafbceebdba340a096285ef179b44, type: 2}
-    weapon: {fileID: 0}
-    hat: {fileID: 0}
+    weapon: {fileID: 11400000, guid: fe2ebf7471b8f0b4d92277038d6befbf, type: 2}
+    hat: {fileID: 11400000, guid: 90b0c1ff2c04de34a943a4cd3f0bc732, type: 2}
   - name: Pirate
     description: Pirates use their cannons to barrage the entire enemy party.
     hp: 12
@@ -73268,7 +73268,7 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: da656f144ff20a54f8eac5d2dfe409d3, type: 2}
-    weapon: {fileID: 0}
+    weapon: {fileID: 11400000, guid: 2c9da281f3080644895a1d8db931ec80, type: 2}
     hat: {fileID: 0}
   namesList:
   - John

@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb3d33f135f9e4140a3eb5de08c7c65a, type: 3}
-  m_Name: Red Hat
+  m_Name: Dark Hat
   m_EditorClassIdentifier: 
-  spr: {fileID: 137715292, guid: 631be643ddda56c4daf91fc74099615e, type: 3}
+  spr: {fileID: -143575553, guid: d5904219473083845becb231f13973c5, type: 3}
