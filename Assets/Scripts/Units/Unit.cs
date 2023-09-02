@@ -198,6 +198,8 @@ public class Unit : MonoBehaviour
         currEP = 0;
         currHP = maxHP;
 
+        
+
         if (passive.condition == PassiveCondition.Permanent && passive.type == PassiveType.StatChange && passive.target == PassiveTarget.Self)
         {
             PermanentSelfPassiveStatIncrease();
@@ -391,6 +393,8 @@ public class Unit : MonoBehaviour
    
 
             rigidbody2D.velocity = Vector3.zero;
+
+
 
             if (meleeCoroutine != null)
             {
@@ -792,6 +796,9 @@ public class Unit : MonoBehaviour
 
     private void OnMouseOver()
     {
+
+        if (dead) return;
+
         details.OpenDetails();
         details.UpdateDetails(this, true);
 
