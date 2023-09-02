@@ -92,11 +92,6 @@ public class GameController : MonoBehaviour
 
         units.AddRange(GameObject.FindObjectsOfType<Unit>());
 
-        for (int i = 0; i < units.Count; i++)
-        {
-            units[i].CombatStart();
-        }
-
     }
 
     public void PauseUnits()

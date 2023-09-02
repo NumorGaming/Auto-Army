@@ -272,19 +272,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a3313de1eb59b40bf04b06051d202c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  origin: {x: 0, y: 0, z: 0}
+  spr: {fileID: 0}
   spriteRenderer: {fileID: 1121225387997652807}
   wpnRenderer: {fileID: 3139913155106666920}
   hatRenderer: {fileID: 5906933233614000501}
   highlight: {fileID: 1121225387562117399}
-  origin: {x: 0, y: 0, z: 0}
-  spr: {fileID: 0}
   wpn: {fileID: 0}
   hat: {fileID: 0}
   unitName: 
+  team: 0
+  party: {fileID: 0}
+  speciesName: 
+  speciesDes: 
+  profName: 
+  profDes: 
+  dragging: 0
   currHP: 0
   maxHP: 0
   currEP: 0
   maxEP: 0
+  epGain: 0
+  originalEpGain: 0
+  bonusEpGain: 0
+  auraEpGain: 0
   power: 0
   originalPower: 0
   passivePower: 0
@@ -297,17 +308,13 @@ MonoBehaviour:
   originalAoe: 0
   bonusAoe: 0
   auraAoe: 0
+  range: 0
+  originalRange: 0
+  bonusRange: 0
   actionSpeed: 0
   originalActionSpeed: 0
   passiveActSpeed: 0
   auraActSpeed: 0
-  epGain: 0
-  originalEpGain: 0
-  bonusEpGain: 0
-  auraEpGain: 0
-  range: 0
-  originalRange: 0
-  bonusRange: 0
   critChance: 5
   originalCritChance: 0
   passiveCritChance: 0
@@ -324,18 +331,12 @@ MonoBehaviour:
   originalMoveSpeed: 0
   passiveMoveSpeed: 0
   auraMoveSpeed: 0
-  speciesName: 
-  speciesDes: 
-  profName: 
-  profDes: 
-  team: 0
-  paused: 1
   target: {fileID: 0}
   distanceToTarget: 0
+  paused: 1
   actionTimer: 0
   acting: 0
   dead: 0
-  dragging: 0
   clicked: 0
   attackPriming: 0
   attacking: 0
@@ -397,7 +398,6 @@ MonoBehaviour:
     flatCostReduction: 0
   statuses: []
   resistedStatuses: 
-  party: {fileID: 0}
   hpSlider: {fileID: 5069546900217092277}
   epSlider: {fileID: 3511763353474798296}
   hitNumber: 0
@@ -675,7 +675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4538783584820239652
 RectTransform:
   m_ObjectHideFlags: 0
@@ -695,7 +695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 66.74}
+  m_AnchoredPosition: {x: 5.000001, y: 21.87999}
   m_SizeDelta: {x: 40, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5069546900217092277
@@ -783,7 +783,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -4.43, y: 0}
   m_SizeDelta: {x: 0.956, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -841,7 +841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &781613616579732204
 RectTransform:
   m_ObjectHideFlags: 0
@@ -861,7 +861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 62.760006}
+  m_AnchoredPosition: {x: 5, y: 17.9}
   m_SizeDelta: {x: 40, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3511763353474798296
@@ -1127,7 +1127,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -4.43, y: 0}
   m_SizeDelta: {x: 0.956, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

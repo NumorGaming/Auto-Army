@@ -88,7 +88,7 @@ public class Party : MonoBehaviour
             newUnitUnit.hat = unit.hat;
         }
 
-        newUnitUnit.UpdateSprites();
+        newUnitUnit.UpdateUnitSprites();
 
         newUnit.name = unit.unitName;
 

@@ -10,74 +10,30 @@ public enum Stat { Power, Defense, Aoe, ActionSpeed, EpGain, Range, CritChance, 
 
 public class Unit : MonoBehaviour
 {
+    
+
+    public Vector3 origin;
+
+    [Header("Visuals")]
+
+    public Sprite spr;
     public SpriteRenderer spriteRenderer;
     public SpriteRenderer wpnRenderer;
     public SpriteRenderer hatRenderer;
     public SpriteRenderer highlight;
 
-    public Vector3 origin;
+    [Header("Items")]
 
-    [Header("Stats")]
-
-    public Sprite spr;
     public Item wpn;
     public Item hat;
 
+    [Header("General Info")]
+
     public string unitName;
 
-    public int currHP;
-    public int maxHP;
-    public int currEP;
-    public int maxEP;
+    public Team team;
 
-    public int power;
-    public int originalPower;
-    public int passivePower;
-    public int auraPower;
-
-    public int def;
-    public int originalDefense;
-    public int passiveDef;
-    public int auraDef;
-
-    public int attackAoe;
-    public int originalAoe;
-    public int bonusAoe;
-    public int auraAoe;
-
-    public float actionSpeed;
-    public float originalActionSpeed;
-    public float passiveActSpeed;
-    public float auraActSpeed;
-
-    public float epGain;
-    public float originalEpGain;
-    public float bonusEpGain;
-    public int auraEpGain;
-
-    public float range;
-    public float originalRange;
-    public float bonusRange;
-
-    public int critChance = 5;
-    public int originalCritChance;
-    public int passiveCritChance;
-    public int auraCritChance;
-
-    public float critDamage = 1.5f;
-    public float originalCritDamage;
-    public float passiveCritDamage;
-    public float auraCritDamage;
-
-    public float lifesteal;
-    public float originalLifesteal;
-    public float passiveLifeSteal;
-    public float auraLifesteal;
-
-    public float moveSpeed;
-    public float originalMoveSpeed;
-    public float passiveMoveSpeed;
-    public float auraMoveSpeed;
+    public Party party;
 
     public string speciesName;
     public string speciesDes;
@@ -85,15 +41,95 @@ public class Unit : MonoBehaviour
     public string profName;
     public string profDes;
 
-    public Team team;
+    public bool dragging;
 
-    [Header("Battle")]
+    [Header("Health")]
 
-    public bool paused;
+    public int currHP;
+    public int maxHP;
+
+    [Header("Energy")]
+
+    public int currEP;
+    public int maxEP;
+
+    [Header("Energy Gain")]
+
+    public float epGain;
+    public float originalEpGain;
+    public float bonusEpGain;
+    public int auraEpGain;
+
+    [Header("Power")]
+
+    public int power;
+    public int originalPower;
+    public int passivePower;
+    public int auraPower;
+
+    [Header("Defense")]
+
+    public int def;
+    public int originalDefense;
+    public int passiveDef;
+    public int auraDef;
+
+    [Header("Attack Aoe")]
+
+    public int attackAoe;
+    public int originalAoe;
+    public int bonusAoe;
+    public int auraAoe;
+
+    [Header("Attack Range")]
+
+    public float range;
+    public float originalRange;
+    public float bonusRange;
+
+    [Header("Action Speed")]
+
+    public float actionSpeed;
+    public float originalActionSpeed;
+    public float passiveActSpeed;
+    public float auraActSpeed;
+
+
+    [Header("Crit Chance")]
+
+    public int critChance = 5;
+    public int originalCritChance;
+    public int passiveCritChance;
+    public int auraCritChance;
+
+    [Header("Crit Damage")]
+
+    public float critDamage = 1.5f;
+    public float originalCritDamage;
+    public float passiveCritDamage;
+    public float auraCritDamage;
+
+    [Header("Lifesteal")]
+
+    public float lifesteal;
+    public float originalLifesteal;
+    public float passiveLifeSteal;
+    public float auraLifesteal;
+
+    [Header("Move Speed")]
+
+    public float moveSpeed;
+    public float originalMoveSpeed;
+    public float passiveMoveSpeed;
+    public float auraMoveSpeed;
+
+    [Header("Battle Info")]
 
     public Unit target;
 
     public float distanceToTarget;
+
+    public bool paused;
 
     public float actionTimer;
 
@@ -101,9 +137,9 @@ public class Unit : MonoBehaviour
 
     public bool dead;
 
-    public bool dragging;
-
     public bool clicked;
+
+    [Header("Melee Attack")]
 
     public bool attackPriming;
     public bool attacking;
@@ -116,20 +152,25 @@ public class Unit : MonoBehaviour
     public float primeStartSpeed;
     public float primeEndSpeed;
 
+    [Header("Projectile")]
+
     public GameObject projectile;
+
+    [Header("Active")]
 
     public ActiveAbility active;
 
+    [Header("Passive")]
+
     public PassiveAbility passive;
+
+    [Header("Status Effects")]
 
     public List<ActiveStatus> statuses;
 
     public List<StatusEffect> resistedStatuses;
 
-    public Party party;
-
-
-    Rigidbody2D rigidbody2D;
+    [Header("UI")]
 
     public Slider hpSlider;
     public Slider epSlider;
@@ -139,34 +180,21 @@ public class Unit : MonoBehaviour
     public int hitNumber;
     public int atkNumber;
 
-
-
-
-
-    //weapon
-    //armor
-    //helmet
-
-    //passives
-
-    //actives
-
-    UnitDetails details;
+    [Header("Other")]
 
     public Coroutine coroutine;
 
     Coroutine meleeCoroutine;
+    Rigidbody2D rigidbody2D;
+    UnitDetails details;
 
-
-
-
-    // Start is called before the first frame update
+    //Set up original stats, target, and various components when spawned.
     void Start()
     {
         FindTarget();
+
         currHP = maxHP;
         currEP = 0;
-
         originalPower = power;
         originalDefense = def;
         originalActionSpeed = actionSpeed;
@@ -188,7 +216,146 @@ public class Unit : MonoBehaviour
 
     }
 
-    public void UpdateSprites()
+    // Update is called once per frame
+    void Update()
+    {
+
+        //Check if a unit is paused. If so make sure the unit isn't moving. This is so the unit does not fly off the screen if they are in the middle of a action when the battle ends.
+        if (paused)
+        {
+            rigidbody2D.velocity = Vector3.zero;
+        }
+
+        //If dead or paused don't go past this point.
+        if (dead || paused) return;
+
+        //Check the state of this unit's statuses.
+        CheckStatuses();
+
+        //Check the state of this unit's stats.
+        UpdateStats();
+
+        //If this unit's passive is based on time, check it's state.
+        if (passive.condition == PassiveCondition.TimeIntervals || passive.condition == PassiveCondition.AfterTime || passive.condition == PassiveCondition.BeforeTime)
+        {
+            CheckTimedPassives();
+        }
+
+        //If this unit's passive is a teammate count buff, check it's state.
+        if (passive.condition == PassiveCondition.TeammateCount && passive.type == PassiveType.StatChange)
+        {
+            TeammateCountStatBuff();
+        }
+
+        //If this unit's passive is based on being hit or attacking a certain amount of times, check it's state.
+        if (passive.condition == PassiveCondition.BeforeHitAmount || passive.condition == PassiveCondition.AfterHitAmount || passive.condition == PassiveCondition.BeforeAtkAmount || passive.condition == PassiveCondition.AfterAtkAmount)
+        {
+            if (passive.type == PassiveType.StatChange)
+            {
+                HitAtkBasedStatBuffs();
+            }
+        }
+
+        //If this unit's passive is based on hp thresholds, check it's state.
+        if (passive.condition == PassiveCondition.BelowHp || passive.condition == PassiveCondition.AboveHp)
+        {
+            HPThreshHoldPassives();
+        }
+
+        //Check for target, distance to target, or find target.
+        if (target != null)
+        {
+            if (target.currHP <= 0)
+            {
+                FindTarget();
+            }
+
+            if (target != null)
+            {
+                distanceToTarget = Vector3.Distance(this.transform.position, target.transform.position);
+            }
+
+        }
+        else
+        {
+            FindTarget();
+        }
+
+        //If this unit's distance to their target is less than their range (plus an extra amount so they aren't hugging), take an action. 
+        if (distanceToTarget <= range + 2 && !acting)
+        {
+            actionTimer += Time.deltaTime;
+
+            if (actionTimer >= actionSpeed)
+            {
+                acting = true;
+                actionTimer = 0;
+                Action();
+            }
+
+        }
+        //If they are not in range, move towards their target.
+        else if (!dragging)
+        {
+            if (target != null && !acting)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
+
+                if (target.transform.position.x > transform.position.x)
+                {
+                    spriteRenderer.flipX = false;
+                }
+                else
+                {
+                    spriteRenderer.flipX = true;
+                }
+
+            }
+        }
+
+        //Attack timers for animation.
+        if (attackPriming)
+        {
+            attackPrimeTimer += Time.deltaTime;
+        }
+
+        if (attacking)
+        {
+            attackTimer += Time.deltaTime;
+        }
+
+    }
+
+    //Call this when combat ends. It resets the units stats, statuses, counters, and ressurects them. 
+    public void CombatOver()
+    {
+        transform.position = origin;
+        Ressurect();
+        RemovePassiveBonusStat();
+        ResetAuras();
+        AuraStatIncreases();
+        statuses.Clear();
+        resistedStatuses.Clear();
+        hitNumber = 0;
+        atkNumber = 0;
+        currEP = 0;
+        currHP = maxHP;
+
+        if (passive.condition == PassiveCondition.Permanent && passive.type == PassiveType.StatChange && passive.target == PassiveTarget.Self)
+        {
+            PermanentSelfPassiveStatIncrease();
+        }
+
+        if (passive.condition == PassiveCondition.Permanent && passive.type == PassiveType.StatusResistance)
+        {
+            PermanentStatusResistance();
+        }
+
+        rigidbody2D.velocity = Vector2.zero;
+    }
+
+    //Update the sprites of this unit based on their species as well as the items they are holding.
+    public void UpdateUnitSprites()
     {
         spriteRenderer.sprite = spr;
 
@@ -204,42 +371,42 @@ public class Unit : MonoBehaviour
         
     }
 
-    public void CombatOver()
+    ///Updates HP and EP UI bars.
+    void UpdateHP()
     {
-        transform.position = origin;
-        Ressurect();
-        RemovePassiveBonusStat();
-        ResetAuras();
-        AuraStatIncreases();
-        statuses.Clear();
-        resistedStatuses.Clear();
-        hitNumber = 0;
-        atkNumber = 0;
-        currEP = 0;
-        currHP = maxHP;
-
-        
-
-        if (passive.condition == PassiveCondition.Permanent && passive.type == PassiveType.StatChange && passive.target == PassiveTarget.Self)
-        {
-            PermanentSelfPassiveStatIncrease();
-        }
-
-        if (passive.condition == PassiveCondition.Permanent && passive.type == PassiveType.StatusResistance)
-        {
-            PermanentStatusResistance();
-        }
-
-        rigidbody2D.velocity = Vector2.zero;
+        hpSlider.maxValue = maxHP;
+        hpSlider.value = currHP;
+        StartCoroutine(ShowHP());
     }
 
-    public void CombatStart()
+    void UpdateEP()
     {
-        
-        
+        epSlider.maxValue = maxEP;
+        epSlider.value = currEP;
+        StartCoroutine(ShowEP());
+    }
+
+    IEnumerator ShowHP()
+    {
+        hpSlider.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+
+        hpSlider.gameObject.SetActive(false);
 
     }
 
+    IEnumerator ShowEP()
+    {
+        epSlider.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+
+        epSlider.gameObject.SetActive(false);
+
+    }
+
+    //This is updated every frame. Stats = originalStats + passiveStats + statusStats + auraStats.
     void UpdateStats()
     {
         power = originalPower + passivePower + StatusPower() + auraPower;
@@ -255,6 +422,7 @@ public class Unit : MonoBehaviour
 
     }
 
+    //Calculates how all of a unit's stats are being effected by their statuses.
     int StatusPower()
     {
         int number = 0;
@@ -360,12 +528,9 @@ public class Unit : MonoBehaviour
         return number;
     }
 
-
+    //Calculates passiveStats for units who increased their stats based on how many active allies they have.
     void TeammateCountStatBuff()
     {
-
-
-
         if (passive.power > 0)
         {
             passivePower = (party.units.Count * passive.power);
@@ -403,169 +568,20 @@ public class Unit : MonoBehaviour
 
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (paused)
-        {
-   
-
-            rigidbody2D.velocity = Vector3.zero;
-
-
-
-            if (meleeCoroutine != null)
-            {
-                StopCoroutine(meleeCoroutine);
-            }
-
-            
-        }
-
-        if (dead || paused) return;
-
-        CheckStatuses();
-
-        UpdateStats();
-
-        if (passive.condition == PassiveCondition.TimeIntervals || passive.condition == PassiveCondition.AfterTime || passive.condition == PassiveCondition.BeforeTime)
-        {
-            
-            CheckTimedPassives();
-            
-        }
-
-        if (passive.condition == PassiveCondition.TeammateCount && passive.type == PassiveType.StatChange)
-        {
-            TeammateCountStatBuff();
-        }
-
-        if (passive.condition == PassiveCondition.BeforeHitAmount || passive.condition == PassiveCondition.AfterHitAmount || passive.condition == PassiveCondition.BeforeAtkAmount || passive.condition == PassiveCondition.AfterAtkAmount)
-        {
-            if (passive.type == PassiveType.StatChange)
-            {
-                HitAtkBasedStatBuffs();
-            }
-        }
-
-        if (passive.condition == PassiveCondition.BelowHp || passive.condition == PassiveCondition.AboveHp)
-        {
-            HPThreshHoldPassives();
-        }
-
-
-
-        if (target != null)
-        {
-            if (target.currHP <= 0 )
-            {
-                FindTarget();
-            }
-
-            if (target != null)
-            {
-                distanceToTarget = Vector3.Distance(this.transform.position, target.transform.position);
-            }
-            
-        }
-        else
-        {
-
-
-            FindTarget();
-        }
-
-        
-
-        if (distanceToTarget <= range + 2 && !acting)
-        {
-            actionTimer += Time.deltaTime;
-
-            if (actionTimer >= actionSpeed)
-            {
-                acting = true;
-                actionTimer = 0;
-                Action();
-            }
-
-        }
-        else if (!dragging)
-        {
-            if (target != null && !acting)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
-
-                if (target.transform.position.x > transform.position.x)
-                {
-                    spriteRenderer.flipX = false;
-                }
-                else
-                {
-                    spriteRenderer.flipX = true;
-                }
-
-            }
-        }
-
-        if (attackPriming)
-        {
-            attackPrimeTimer += Time.deltaTime;
-        }
-
-        if (attacking)
-        {
-            attackTimer += Time.deltaTime;
-        }
-        
-    }
-
-    void UpdateHP()
-    {
-        hpSlider.maxValue = maxHP;
-        hpSlider.value = currHP;
-        StartCoroutine(ShowHP());
-    }
-
-    void UpdateEP()
-    {
-        epSlider.maxValue = maxEP;
-        epSlider.value = currEP;
-        StartCoroutine(ShowEP());
-    }
-
-    IEnumerator ShowHP()
-    {
-        hpSlider.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(1f);
-
-        hpSlider.gameObject.SetActive(false);
-
-    }
-
-    IEnumerator ShowEP()
-    {
-        epSlider.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(1f);
-
-        epSlider.gameObject.SetActive(false);
-
-    }
-
+    //Check for all the statuses this unit has. 
     void CheckStatuses()
     {
         for (int i = 0; i < statuses.Count; i++)
         {
             statuses[i].statusTimer += Time.deltaTime;
 
+            //Check for removing status.
             if (statuses[i].statusTimer > statuses[i].statusTime)
             {
                 statuses.Remove(statuses[i]);
                 i--;
             }
+            //Check for tic damage.
             else if (statuses[i].ticDamage > 0)
             {
                 statuses[i].ticTimer += Time.deltaTime;
@@ -608,49 +624,45 @@ public class Unit : MonoBehaviour
 
     }
 
+    //This unit takes an action.
     void Action()
     {
         if (dead || paused || CheckIfHasStatus(StatusEffect.Stun)) return;
 
+        //If this unit's EP is full, use their active ability.
         if (currEP >= maxEP && active != null)
         {
             StartCoroutine(ActiveMovement());
             currEP = 0;
             UpdateEP();
         }
+        //If this unit's EP is not fulled, use their basic attack.
         else
         {
             BasicAttack();
         }
     }
 
+    //Activate this unit's basic attack.
     void BasicAttack()
     {
         if (dead || paused || CheckIfHasStatus(StatusEffect.Stun)) return;
 
-
         atkNumber++;
 
+        //If this unit's range is above a certain amount, use their projectile attack.
         if (projectile != null && range > 6)
         {
             RangedAttack();
         }
+        //Otherwise, use their melee attack.
         else
         {
             meleeCoroutine = StartCoroutine(MeleeAttack());
         }
-
-
-
-
-
     }
 
-    void Ability()
-    {
-
-    }
-
+    //Make this unit take damage.
     public void TakeDamage(float damageTaken)
     {
         if (dead || paused) return;
@@ -668,6 +680,7 @@ public class Unit : MonoBehaviour
 
         hitNumber++;
 
+        //Activate passive effects after taking damage.
         if (passive.condition == PassiveCondition.AfterEveryHit)
         {
             AfterHitEffects();
@@ -688,15 +701,12 @@ public class Unit : MonoBehaviour
 
     }
 
+    //Make this unit heal hp.
     public void Heal(float heal)
     {
         if (dead || paused) return;
 
-  
-
         currHP += Mathf.RoundToInt(heal);
-
-        
 
         if (currHP >= maxHP)
         {
@@ -712,6 +722,7 @@ public class Unit : MonoBehaviour
 
     }
 
+    //Make unit respawn if they are dead and max out their HP.
     void Ressurect()
     {
 
@@ -722,9 +733,9 @@ public class Unit : MonoBehaviour
         sequence.Join(highlight.DOFade(1f, 1f));
     }
 
+    //Active when a unit dies and despawn them.
     void Die()
     {
-        
         dead = true;
         currHP = 0;
         var sequence = DOTween.Sequence();
@@ -732,6 +743,7 @@ public class Unit : MonoBehaviour
         sequence.Join(highlight.DOFade(0f, 1f));
     }
 
+    //Flash colors for when taking damage or healing.
     IEnumerator FlashRed()
     {
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
@@ -746,11 +758,10 @@ public class Unit : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 
-
+    //Finds this unit their next target. Very simple code, will need to be improved when I add AI changing mechanics.
     void FindTarget()
     {
         
-
         List<Unit> units = new List<Unit>();
 
         units.AddRange(GameObject.FindObjectsOfType<Unit>());
@@ -788,13 +799,11 @@ public class Unit : MonoBehaviour
             }
         }
 
-  
-
         target = GetClosestEnemy(units);
-
 
     }
 
+    //Script for getting the enemy closest to this unit.
     Unit GetClosestEnemy(List<Unit> enemies)
     {
         Unit bestTarget = null;
@@ -814,6 +823,7 @@ public class Unit : MonoBehaviour
         return bestTarget;
     }
 
+    //Code for showing unitdetails when you hover over units.
     private void OnMouseOver()
     {
 
@@ -866,11 +876,7 @@ public class Unit : MonoBehaviour
         details.CloseDetails();
     }
 
-    public void GoToOrigin()
-    {
-        transform.position = origin;
-    }
-
+    //Roll to see if you get a critical strike
     bool RollForCrit()
     {
         int number = Random.Range(0, 101);
@@ -884,6 +890,7 @@ public class Unit : MonoBehaviour
     }
 
 
+    //Applies a status on enemies in an aoe around whatever target you choose.
     void AoeStatus(int aoe, Unit aoeTarget)
     {
 
@@ -929,6 +936,8 @@ public class Unit : MonoBehaviour
 
     }
 
+
+    //Damages enemies in an aoe around whatever target you choose.
     void AoeAttack(int damage, int aoe, Unit aoeTarget)
     {
 
@@ -978,6 +987,7 @@ public class Unit : MonoBehaviour
 
     }
 
+    //Heals enemies in an aoe around whatever target you choose.
     void AoeHeal(int heal, int aoe, Unit aoeTarget)
     {
 
@@ -1022,6 +1032,7 @@ public class Unit : MonoBehaviour
 
     }
 
+    //Check for 50% chance to miss if this unit is blinded.
     bool CheckForMiss()
     {
         for (int i = 0; i < statuses.Count; i++)
@@ -1040,6 +1051,7 @@ public class Unit : MonoBehaviour
         return false;
     }
 
+    //Melee attack animation -> attack effects.
     IEnumerator MeleeAttack()
     {
         float speed = 0;
@@ -1166,7 +1178,7 @@ public class Unit : MonoBehaviour
 
     }
 
-   
+    //Ranged projectile attack -> attack effects.
     public void RangedAttack()
     {
         if (!CheckForMiss())
@@ -1209,6 +1221,7 @@ public class Unit : MonoBehaviour
 
     }
 
+    //Use to find a single heal target.
     Unit FindHealTarget()
     {
 
@@ -1275,6 +1288,7 @@ public class Unit : MonoBehaviour
 
     }
 
+    //Use to find out if this unit resists a status.
     bool CheckIfStatusResisted(StatusEffect status)
     {
         for (int i = 0; i < resistedStatuses.Count; i++)
@@ -1288,6 +1302,7 @@ public class Unit : MonoBehaviour
         return false;
     }
 
+    //Give a new status to this unit.
     void GiveStatus(Unit target, StatusEffect status, float statusTime, float statusTimer, int damage, float ticTime, float ticTimer,
         int power, int defense, float lifesteal, float actionspeed, float movespeed, float critdamage, int critchance, string des)
     {
@@ -1345,6 +1360,7 @@ public class Unit : MonoBehaviour
         }
     }
 
+    //Activate the effects for this unit's active ability.
     void ActiveEffect()
     {
         if (active.target == ActiveAbility.AbilityTarget.Foe)
@@ -1478,6 +1494,7 @@ public class Unit : MonoBehaviour
         acting = false;
     }
 
+    //Get multiple targets to attack
     List<Unit> GetMultitargets(int targetAmount)
     {
         List<Unit> units = new List<Unit>();
@@ -1521,6 +1538,7 @@ public class Unit : MonoBehaviour
 
     }
 
+    //Animation for active ability, mirrors the melee attack currently.
     IEnumerator ActiveMovement()
     {
         float speed = 0;
@@ -1583,7 +1601,7 @@ public class Unit : MonoBehaviour
 
     }
 
-
+    //Effects for after being hit.
     void AfterHitEffects()
     {
         if (passive.type == PassiveType.StatChange)
@@ -1605,7 +1623,7 @@ public class Unit : MonoBehaviour
         }
     }
 
-
+    //Effects for after attacking.
     void AfterAtkEffects()
     {
         if (passive.type == PassiveType.StatChange)
@@ -1631,6 +1649,7 @@ public class Unit : MonoBehaviour
         
     }
 
+    //Various aura code. Aura comes from certain passives that increase every ally on a unit's team by a flat amount.
     void ResetAuras()
     {
         auraCritDamage = 0;
@@ -1692,6 +1711,7 @@ public class Unit : MonoBehaviour
         }
     }
 
+    //Increase stat from passive for the whole battle.
     void PermanentSelfPassiveStatIncrease()
     {
 
@@ -1705,6 +1725,7 @@ public class Unit : MonoBehaviour
 
     }
 
+    //Activate passive stat buffs based on being attacked or hit a certain amount.
     void HitAtkBasedStatBuffs()
     {
 
@@ -1756,12 +1777,11 @@ public class Unit : MonoBehaviour
 
     }
 
+    //Add status resistance from your passive.
     void PermanentStatusResistance()
     {
         resistedStatuses.Add(passive.resistedEffect);
     }
-
-    
 
     Unit GetRandomAlly()
     {
@@ -1833,6 +1853,7 @@ public class Unit : MonoBehaviour
         return units[number];
     }
 
+    //Used for checking various passives based on time.
     void CheckTimedPassives()
     {
         if (passive.ticTime > 0)
@@ -1951,8 +1972,6 @@ public class Unit : MonoBehaviour
 
     }
 
-
-
     void RemovePassiveBonusStat()
     {
         passiveCritDamage = 0;
@@ -1991,6 +2010,7 @@ public class Unit : MonoBehaviour
         bonusAoe = passive.aoe;
     }
 
+    //Increase stats by a certain amount after every time interval.
     void IncrementalPassiveStatIncrease()
     {
         passiveCritDamage += passive.critDamage;
@@ -2010,7 +2030,7 @@ public class Unit : MonoBehaviour
         bonusAoe += passive.aoe;
     }
 
-
+    //Passives based on how much hp you have.
     void HPThreshHoldPassives()
     {
         if (passive.condition == PassiveCondition.BelowHp)
@@ -2070,6 +2090,7 @@ public class Unit : MonoBehaviour
 
     }
 
+    //Collision to make a ally unit to return to their origin if dragged to the enemy side.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "UnitBlock" && team == Team.Ally)
