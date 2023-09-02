@@ -211,6 +211,12 @@ public class GameController : MonoBehaviour
         {
             enemyParty.CreateRandomUnit();
         }
+
+        if (player.level == 3 || player.level == 6 || player.level == 9 || player.level == 12 || player.level == 13)
+        {
+            enemyParty.SpawnUnit(map.GetBoss().GetComponent<Unit>());
+        }
+
     }
 
     void DisableDragging()

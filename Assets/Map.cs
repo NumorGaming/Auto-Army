@@ -53,6 +53,21 @@ public class Map : MonoBehaviour
         }
     }
 
+    public GameObject GetBoss()
+    {
+        for (int i = 0; i < areaNodes.Count; i++)
+        {
+
+            if (i == player.level - 1)
+            {
+                return areaNodes[i].bossObj;
+            }
+
+        }
+
+        return null;
+    }
+
     void NormalNode(int i)
     {
 
@@ -81,8 +96,8 @@ public class Map : MonoBehaviour
 
         areaNodes[i].environment.sprite = getEnv.spr;
         areaNodes[i].boss.sprite = getBoss.GetComponent<Unit>().spr;
+        areaNodes[i].bossObj = getBoss;
 
-        
         envList.Add(getEnv);
         
     }
