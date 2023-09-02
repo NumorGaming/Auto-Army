@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Active", menuName = "Ability/Create new active")]
+[CreateAssetMenu(fileName = "Active", menuName = "Active/Create new active")]
 public class ActiveAbility : ScriptableObject
 {
 

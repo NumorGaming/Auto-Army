@@ -254,6 +254,7 @@ MonoBehaviour:
   environment: {fileID: 602671004}
   background: {fileID: 1948842928}
   boss: {fileID: 1980696782}
+  bossObj: {fileID: 0}
 --- !u!1 &63506690
 GameObject:
   m_ObjectHideFlags: 0
@@ -46358,6 +46359,7 @@ MonoBehaviour:
   environment: {fileID: 924690189}
   background: {fileID: 1254482229}
   boss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!1 &635582744
 GameObject:
   m_ObjectHideFlags: 0
@@ -67879,6 +67881,7 @@ MonoBehaviour:
   environment: {fileID: 487331136}
   background: {fileID: 2097299558}
   boss: {fileID: 2058575535}
+  bossObj: {fileID: 0}
 --- !u!1 &718376737
 GameObject:
   m_ObjectHideFlags: 0
@@ -74058,6 +74061,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: db48d298b78f8814d99aa2a84a88df10, type: 2}
+    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
+    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
   - name: Berzerker
     description: Berzerkers are known for their rage powers.
     hp: 22
@@ -74071,6 +74076,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: bd2aa8a3c5ced504195c819741ea62b3, type: 2}
+    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
+    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
   - name: Defender
     description: Defenders are armorclad as frick.
     hp: 30
@@ -74084,6 +74091,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: f439d76f523d8b444a31179ac7fd7087, type: 2}
+    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
+    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
   - name: Fire Mage
     description: Fire Mages use fire magic.
     hp: 5
@@ -74097,6 +74106,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 1902250454826159191, guid: 082719f133f6f044dbf0b105377514a1, type: 3}
     active: {fileID: 11400000, guid: e0aa5a2fe608a9446b843485a939cf3b, type: 2}
+    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
+    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
   - name: Shock Mage
     description: Shock Mages use lightning magic.
     hp: 7
@@ -74110,6 +74121,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 1902250454826159191, guid: 082719f133f6f044dbf0b105377514a1, type: 3}
     active: {fileID: 11400000, guid: f55e6f13b9cf97a468dd6ea2fa31e2cd, type: 2}
+    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
+    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
   - name: Dark Mage
     description: Dark Mages are one with darkness.
     hp: 8
@@ -74123,6 +74136,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 1902250454826159191, guid: 082719f133f6f044dbf0b105377514a1, type: 3}
     active: {fileID: 11400000, guid: 67ea83becfe1e2a4f806c92ccd5d65a3, type: 2}
+    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
+    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
   - name: Frost Mage
     description: Frost Mages are one with the cold.
     hp: 10
@@ -74136,6 +74151,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 1902250454826159191, guid: 082719f133f6f044dbf0b105377514a1, type: 3}
     active: {fileID: 11400000, guid: 1174955c9634e3e46bd3ddbb4d85bd77, type: 2}
+    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
+    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
   - name: Blood Mage
     description: Blood Mages are one with blood.
     hp: 13
@@ -74149,6 +74166,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: fe4e8ae5b5ee0214ea5af208064efc13, type: 2}
+    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
+    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
   - name: Brawler
     description: Brawlers use their first to knock out opponents.
     hp: 12
@@ -74162,6 +74181,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: ebbc21eb36da2b74db3156968b8945f5, type: 2}
+    weapon: {fileID: 11400000, guid: 2a99e1d3dd3db1542aa86721289841e6, type: 2}
+    hat: {fileID: 11400000, guid: 2a9f2369922adbd47a3fd56e900cd8a3, type: 2}
   - name: Medic
     description: Medics heal their allies.
     hp: 8
@@ -74175,6 +74196,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: f1b7ce9493014bc4eb346ee20bce3606, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Cultist
     description: Cultists use demonic magic to heal themselves.
     hp: 7
@@ -74188,6 +74211,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 4b97fc9a4c038e34c854ccef980c5737, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Rogue
     description: Rogues cut their opponents.
     hp: 12
@@ -74201,6 +74226,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 787b3a92077c60b439635ee175ee1566, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Darkblade
     description: Darkblades enhanced their weaponry with dark magic.
     hp: 11
@@ -74214,6 +74241,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: c1bc8e655714d8142927ddd6f6c29a20, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Flameblade
     description: Darkblades enhanced their weaponry with fire magic.
     hp: 11
@@ -74227,6 +74256,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 60a40a089d47bd44d91116abcb3873b2, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Shockblade
     description: Darkblades enhanced their weaponry with lightning magic.
     hp: 11
@@ -74240,6 +74271,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 15f2dc60b8b147a4cb8178eefc89c554, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Bloodblade
     description: Darkblades enhanced their weaponry with blood magic.
     hp: 20
@@ -74253,6 +74286,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: bdae996c93f5cbe4f9a7c2ac54b35826, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Lancer
     description: Lancers use their lance to hit in a wide range.
     hp: 24
@@ -74266,6 +74301,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 890a5be4963a028409f98fa9a4071f13, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Illusionist
     description: Illusionists confuse their opponents.
     hp: 7
@@ -74279,6 +74316,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: f89eb3616e260bd4ca64d7aa81ca7af4, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Archer
     description: Archers use their range to their advantage.
     hp: 2
@@ -74292,6 +74331,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 1902250454826159191, guid: 082719f133f6f044dbf0b105377514a1, type: 3}
     active: {fileID: 11400000, guid: 24e010ade8129fa44ad7f178931a5938, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Cleric
     description: Clerics heal their allies around them.
     hp: 15
@@ -74305,6 +74346,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 2323dd4ab1b82414e9a140e864ef0abc, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Psionic
     description: Psionics use their mind to charm their enemies
     hp: 8
@@ -74318,6 +74361,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 473be02a3bb71a443bae5a2334b3f075, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Swashbuckler
     description: Swashbuckers crack the armor of their enemies.
     hp: 17
@@ -74331,6 +74376,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 24055b32442481f40a8d40a2cef7ac24, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Duelist
     description: Duelists disarm their enemies.
     hp: 15
@@ -74344,6 +74391,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 72a0a0c858c87eb469029a05bb4a228d, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Bard
     description: Bards make their allies dance.
     hp: 9
@@ -74357,6 +74406,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 571117f9294c93b4894bf9395fd59bb1, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Knight
     description: Knights have powerful armor and strike hard.
     hp: 25
@@ -74370,6 +74421,8 @@ MonoBehaviour:
     cost: 2
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: 801cafbceebdba340a096285ef179b44, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   - name: Pirate
     description: Pirates use their cannons to barrage the entire enemy party.
     hp: 12
@@ -74383,6 +74436,8 @@ MonoBehaviour:
     cost: 1
     projectile: {fileID: 0}
     active: {fileID: 11400000, guid: da656f144ff20a54f8eac5d2dfe409d3, type: 2}
+    weapon: {fileID: 0}
+    hat: {fileID: 0}
   namesList:
   - John
   - Gibby
@@ -74681,6 +74736,7 @@ MonoBehaviour:
   environment: {fileID: 265857820}
   background: {fileID: 1428643863}
   boss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!1 &826774585
 GameObject:
   m_ObjectHideFlags: 0
@@ -95948,6 +96004,7 @@ MonoBehaviour:
   environment: {fileID: 1859148782}
   background: {fileID: 1374300110}
   boss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!1 &912658946
 GameObject:
   m_ObjectHideFlags: 0
@@ -96003,6 +96060,7 @@ MonoBehaviour:
   environment: {fileID: 732118753}
   background: {fileID: 1485084473}
   boss: {fileID: 1184553037}
+  bossObj: {fileID: 0}
 --- !u!1 &924690187
 GameObject:
   m_ObjectHideFlags: 0
@@ -96133,6 +96191,7 @@ MonoBehaviour:
   environment: {fileID: 2031214980}
   background: {fileID: 1274441147}
   boss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!1 &930276778
 GameObject:
   m_ObjectHideFlags: 0
@@ -97136,6 +97195,7 @@ MonoBehaviour:
   environment: {fileID: 1359851530}
   background: {fileID: 1039048448}
   boss: {fileID: 1330553131}
+  bossObj: {fileID: 0}
 --- !u!1 &1039048446
 GameObject:
   m_ObjectHideFlags: 0
@@ -97625,6 +97685,7 @@ MonoBehaviour:
   environment: {fileID: 826774587}
   background: {fileID: 1194098276}
   boss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!1 &1062560541
 GameObject:
   m_ObjectHideFlags: 0
@@ -100143,6 +100204,7 @@ MonoBehaviour:
   environment: {fileID: 71990052}
   background: {fileID: 866688224}
   boss: {fileID: 1413255999}
+  bossObj: {fileID: 0}
 --- !u!1 &1413255997
 GameObject:
   m_ObjectHideFlags: 0
@@ -101476,6 +101538,7 @@ MonoBehaviour:
   environment: {fileID: 329614352}
   background: {fileID: 1345753401}
   boss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!1 &1716661372
 GameObject:
   m_ObjectHideFlags: 0
@@ -102078,6 +102141,7 @@ MonoBehaviour:
   environment: {fileID: 1226262646}
   background: {fileID: 64858681}
   boss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!1 &1838933420
 GameObject:
   m_ObjectHideFlags: 0
@@ -102657,6 +102721,7 @@ MonoBehaviour:
   environment: {fileID: 99393605}
   background: {fileID: 970837256}
   boss: {fileID: 0}
+  bossObj: {fileID: 0}
 --- !u!1 &1894792975
 GameObject:
   m_ObjectHideFlags: 0

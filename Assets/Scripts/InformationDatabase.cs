@@ -68,5 +68,7 @@ public class Profession // class gives a active ability, and also gives stats.
     public int cost;
     public GameObject projectile;
     public ActiveAbility active;
+    public Item weapon;
+    public Item hat;
     
 }

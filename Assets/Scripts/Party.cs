@@ -78,7 +78,17 @@ public class Party : MonoBehaviour
         newUnitUnit.passive = unit.passive;
         newUnitUnit.party = this;
 
-        newUnitUnit.GetComponent<SpriteRenderer>().sprite = newUnitUnit.spr;
+        if (unit.wpn != null)
+        {
+            newUnitUnit.wpn = unit.wpn;
+        }
+
+        if (unit.hat != null)
+        {
+            newUnitUnit.hat = unit.hat;
+        }
+
+        newUnitUnit.UpdateSprites();
 
         newUnit.name = unit.unitName;
 

@@ -11,6 +11,8 @@ public enum Stat { Power, Defense, Aoe, ActionSpeed, EpGain, Range, CritChance, 
 public class Unit : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
+    public SpriteRenderer wpnRenderer;
+    public SpriteRenderer hatRenderer;
     public SpriteRenderer highlight;
 
     public Vector3 origin;
@@ -18,6 +20,8 @@ public class Unit : MonoBehaviour
     [Header("Stats")]
 
     public Sprite spr;
+    public Item wpn;
+    public Item hat;
 
     public string unitName;
 
@@ -182,6 +186,22 @@ public class Unit : MonoBehaviour
         UpdateHP();
         UpdateEP();
 
+    }
+
+    public void UpdateSprites()
+    {
+        spriteRenderer.sprite = spr;
+
+        if (wpn != null)
+        {
+            wpnRenderer.sprite = wpn.spr;
+        }
+
+        if (hat != null)
+        {
+            hatRenderer.sprite = hat.spr;
+        }
+        
     }
 
     public void CombatOver()

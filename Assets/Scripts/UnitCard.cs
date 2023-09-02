@@ -104,6 +104,16 @@ public class UnitCard : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
             unit.passive = getSpecies.passive;
             cost += getSpecies.cost;
 
+            if (getProf.weapon != null)
+            {
+                unit.wpn = getProf.weapon;
+            }
+
+            if (getProf.hat != null)
+            {
+                unit.hat = getProf.hat;
+            }
+
 
             unit.profName = getProf.name;
             unit.profDes = getProf.description;
