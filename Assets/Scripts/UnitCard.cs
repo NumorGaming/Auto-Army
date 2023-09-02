@@ -102,7 +102,13 @@ public class UnitCard : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
             unit.maxHP += getSpecies.hp;
             unit.maxEP += getSpecies.ep;
             unit.passive = getSpecies.passive;
+            
             cost += getSpecies.cost;
+
+            unit.wpnPos = getSpecies.wpnPos;
+            unit.hatPos = getSpecies.hatPos;
+            unit.highlightPos = getSpecies.highlightPos;
+            unit.uiPos = getSpecies.UiPos;
 
             if (getProf.weapon != null)
             {

@@ -78,6 +78,12 @@ public class Party : MonoBehaviour
         newUnitUnit.passive = unit.passive;
         newUnitUnit.party = this;
 
+
+        newUnitUnit.hatPos = unit.hatPos;
+        newUnitUnit.wpnPos = unit.wpnPos;
+        newUnitUnit.highlightPos = unit.highlightPos;
+        newUnitUnit.uiPos = unit.uiPos;
+
         if (unit.wpn != null)
         {
             newUnitUnit.wpn = unit.wpn;

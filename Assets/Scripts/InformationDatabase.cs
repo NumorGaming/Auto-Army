@@ -23,13 +23,7 @@ public class InformationDatabase : MonoBehaviour
         i = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
-
 
 [System.Serializable]
 public class Species // species gives a special passive, and also gives stats. // this also determines their appearence
@@ -37,6 +31,10 @@ public class Species // species gives a special passive, and also gives stats. /
     public string name;
     [TextArea]
     public string description;
+    public Vector3 wpnPos;
+    public Vector3 hatPos;
+    public Vector3 highlightPos;
+    public Vector3 UiPos;
     public Sprite spr;
     public int hp;
     public int ep;

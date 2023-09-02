@@ -67364,6 +67364,10 @@ MonoBehaviour:
   speciesList:
   - name: Angel
     description: Angels are from heaven.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 379313655, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 45
     ep: 12
@@ -67422,6 +67426,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Angelblood
     description: Angelbloods are humans with an angelic bloodline.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 582376064, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 22
     ep: 8
@@ -67478,28 +67486,32 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
-  - name: Airoid
-    description: Airoids are humanoids made out of air.
-    spr: {fileID: -1980840693, guid: 401267339216ce046b18215baa1b74fc, type: 3}
-    hp: 19
-    ep: 10
-    power: 5
-    def: 2
-    actionSpeed: 2.5
-    epGain: 2
-    range: 0
-    moveSpeed: 3
-    cost: 1
+  - name: Bulk
+    description: Bulks are giant masses of flesh and bone.
+    wpnPos: {x: -0.022, y: -0.042, z: 0}
+    hatPos: {x: 0, y: 0.43, z: 0}
+    highlightPos: {x: -0.002, y: -0.45, z: 0}
+    UiPos: {x: -3.4, y: 22, z: 0}
+    spr: {fileID: 955979162, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
+    hp: 50
+    ep: 12
+    power: 15
+    def: 3
+    actionSpeed: 5
+    epGain: 3
+    range: 1
+    moveSpeed: 1
+    cost: 3
     passive:
-      name: Gravity
-      description: Pull immune.
-      type: 0
+      name: Full Force
+      description: Deal 2x more crit damage and +20 crit chance.
+      type: 3
       condition: 0
       target: 0
       flatHeal: 0
       flatEpHeal: 0
       oneTimeHealActivated: 0
-      critDamage: 0
+      critDamage: 2
       critChance: 0
       moveSpeed: 0
       power: 0
@@ -67533,11 +67545,15 @@ MonoBehaviour:
         def: 0
         lifesteal: 0
         actionSpeed: 0
-      resistedEffect: 13
+      resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
   - name: Bugbear
     description: Bugbears are large hairy creatures.
+    wpnPos: {x: 0.034, y: -0.129, z: 0}
+    hatPos: {x: -0.013, y: 0.243, z: 0}
+    highlightPos: {x: -0.001, y: -0.435, z: 0}
+    UiPos: {x: -4.8, y: 5.7, z: 0}
     spr: {fileID: -1458570488, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 5
@@ -67595,66 +67611,12 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
-  - name: Bulk
-    description: Bulks are giant masses of flesh and bone.
-    spr: {fileID: 955979162, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
-    hp: 50
-    ep: 12
-    power: 15
-    def: 3
-    actionSpeed: 5
-    epGain: 3
-    range: 1
-    moveSpeed: 1
-    cost: 3
-    passive:
-      name: Full Force
-      description: Deal 2x more crit damage and +20 crit chance.
-      type: 3
-      condition: 0
-      target: 0
-      flatHeal: 0
-      flatEpHeal: 0
-      oneTimeHealActivated: 0
-      critDamage: 2
-      critChance: 0
-      moveSpeed: 0
-      power: 0
-      def: 0
-      lifesteal: 0
-      actionSpeed: 0
-      ticTime: 0
-      ticTimer: 0
-      timePassiveActivated: 0
-      timePassiveDeactivated: 0
-      hpThreshold: 0
-      hitAmount: 0
-      atkAmount: 0
-      damageByPowerMultiple: 0
-      flatDamage: 0
-      range: 0
-      aoe: 0
-      status:
-        name: 
-        description: 
-        status: 0
-        statusTime: 0
-        statusTimer: 0
-        ticTime: 0
-        ticTimer: 0
-        ticDamage: 0
-        critDamage: 0
-        critChance: 0
-        moveSpeed: 0
-        power: 0
-        def: 0
-        lifesteal: 0
-        actionSpeed: 0
-      resistedEffect: 0
-      costAmount: 0
-      flatCostReduction: 0
   - name: Centaur
     description: Centaurs are horse-like humanoids.
+    wpnPos: {x: 0.194, y: 0.056, z: 0}
+    hatPos: {x: 0.124, y: 0.374, z: 0}
+    highlightPos: {x: -0.002, y: -0.472, z: 0}
+    UiPos: {x: 8.7, y: 17.4, z: 0}
     spr: {fileID: -2100800579, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 5
@@ -67713,6 +67675,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Demon
     description: Demons are creatures from the infernal plane.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 1125579819, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 70
     ep: 15
@@ -67771,6 +67737,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Demonblood
     description: Demonbloods are humans with a demonic bloodline.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 639247655, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 12
@@ -67829,6 +67799,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Dwarf
     description: Dwarves are known for their hardy nature.
+    wpnPos: {x: 0.026, y: -0.169, z: 0}
+    hatPos: {x: 0, y: 0.111, z: 0}
+    highlightPos: {x: -0.014, y: -0.435, z: 0}
+    UiPos: {x: -1.8, y: -8.3, z: 0}
     spr: {fileID: -706133674, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 22
     ep: 10
@@ -67887,6 +67861,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Fairy
     description: Fairies are little creatures with wings.
+    wpnPos: {x: 0.1, y: -0.162, z: 0}
+    hatPos: {x: 0.032, y: 0.125, z: 0}
+    highlightPos: {x: 0.017, y: -0.435, z: 0}
+    UiPos: {x: 0.5, y: -6.8, z: 0}
     spr: {fileID: -1844759847, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 12
     ep: 5
@@ -67943,66 +67921,12 @@ MonoBehaviour:
       resistedEffect: 7
       costAmount: 0
       flatCostReduction: 0
-  - name: Fireoid
-    description: Fireoids are humanoids imbued with fire.
-    spr: {fileID: -1209726172, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
-    hp: 18
-    ep: 8
-    power: 7
-    def: 1
-    actionSpeed: 2.5
-    epGain: 5
-    range: 1
-    moveSpeed: 1.5
-    cost: 1
-    passive:
-      name: Burn Immune
-      description: Immune to burn.
-      type: 0
-      condition: 0
-      target: 0
-      flatHeal: 0
-      flatEpHeal: 0
-      oneTimeHealActivated: 0
-      critDamage: 0
-      critChance: 0
-      moveSpeed: 0
-      power: 0
-      def: 0
-      lifesteal: 0
-      actionSpeed: 0
-      ticTime: 0
-      ticTimer: 0
-      timePassiveActivated: 0
-      timePassiveDeactivated: 0
-      hpThreshold: 0
-      hitAmount: 0
-      atkAmount: 0
-      damageByPowerMultiple: 0
-      flatDamage: 0
-      range: 0
-      aoe: 0
-      status:
-        name: 
-        description: 
-        status: 0
-        statusTime: 0
-        statusTimer: 0
-        ticTime: 0
-        ticTimer: 0
-        ticDamage: 0
-        critDamage: 0
-        critChance: 0
-        moveSpeed: 0
-        power: 0
-        def: 0
-        lifesteal: 0
-        actionSpeed: 0
-      resistedEffect: 1
-      costAmount: 0
-      flatCostReduction: 0
   - name: Half-Orc
     description: 'Half-Orcs are a cross between humans and orcs. '
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -1690431050, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 22
     ep: 5
@@ -68061,6 +67985,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Hobgoblin
     description: Hobgoblins are larger more intelligent goblins.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 975433584, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 7
@@ -68117,67 +68045,13 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
-  - name: High Elf
-    description: High Elves are closer to the true form of the Elves.
-    spr: {fileID: -289351389, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
-    hp: 32
-    ep: 12
-    power: 7
-    def: 3
-    actionSpeed: 2.5
-    epGain: 2
-    range: 0
-    moveSpeed: 2
-    cost: 3
-    passive:
-      name: Double Strike
-      description: Every attack hits a second time for half your power.
-      type: 1
-      condition: 11
-      target: 2
-      flatHeal: 0
-      flatEpHeal: 0
-      oneTimeHealActivated: 0
-      critDamage: 0
-      critChance: 0
-      moveSpeed: 0
-      power: 0
-      def: 0
-      lifesteal: 0
-      actionSpeed: 0
-      ticTime: 0
-      ticTimer: 0
-      timePassiveActivated: 0
-      timePassiveDeactivated: 0
-      hpThreshold: 0
-      hitAmount: 0
-      atkAmount: 0
-      damageByPowerMultiple: 0.5
-      flatDamage: 0
-      range: 0
-      aoe: 0
-      status:
-        name: 
-        description: 
-        status: 0
-        statusTime: 0
-        statusTimer: 0
-        ticTime: 0
-        ticTimer: 0
-        ticDamage: 0
-        critDamage: 0
-        critChance: 0
-        moveSpeed: 0
-        power: 0
-        def: 0
-        lifesteal: 0
-        actionSpeed: 0
-      resistedEffect: 0
-      costAmount: 0
-      flatCostReduction: 0
   - name: Human
     description: Humans are the most populous species across the world. They aren't
       known for anything special.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -1225043659, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 15
     ep: 4
@@ -68236,6 +68110,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Giant
     description: Giants are large humans.
+    wpnPos: {x: -0.07, y: -0.025, z: 0}
+    hatPos: {x: 0.001, y: 0.531, z: 0}
+    highlightPos: {x: -0.016, y: -0.463, z: 0}
+    UiPos: {x: -3.7, y: 30.9, z: 0}
     spr: {fileID: 23827823, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 40
     ep: 12
@@ -68294,6 +68172,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Goliath
     description: Goliaths are large humanoids that hit extremely hard.
+    wpnPos: {x: 0.034, y: -0.129, z: 0}
+    hatPos: {x: -0.013, y: 0.243, z: 0}
+    highlightPos: {x: -0.001, y: -0.435, z: 0}
+    UiPos: {x: -4.8, y: 5.7, z: 0}
     spr: {fileID: -267193977, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 8
@@ -68352,6 +68234,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Goblin
     description: Goblins are little green creatures that love ambushing their prey.
+    wpnPos: {x: 0.067, y: -0.164, z: 0}
+    hatPos: {x: -0.001, y: 0.077, z: 0}
+    highlightPos: {x: -0.016, y: -0.45, z: 0}
+    UiPos: {x: -3.7, y: -12.6, z: 0}
     spr: {fileID: 1383702328, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 20
     ep: 5
@@ -68410,6 +68296,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Gobi
     description: Gobis are tinier goblins.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -1808683802, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 12
     ep: 5
@@ -68468,6 +68358,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Orc
     description: 'Orcs are a tribal species known for their savagery. '
+    wpnPos: {x: 0.034, y: -0.129, z: 0}
+    hatPos: {x: -0.013, y: 0.243, z: 0}
+    highlightPos: {x: -0.001, y: -0.435, z: 0}
+    UiPos: {x: -4.8, y: 5.7, z: 0}
     spr: {fileID: -2071075573, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 30
     ep: 7
@@ -68526,6 +68420,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Ogre
     description: Ogres are giant bulky green creatures.
+    wpnPos: {x: -0.022, y: -0.042, z: 0}
+    hatPos: {x: 0, y: 0.43, z: 0}
+    highlightPos: {x: -0.002, y: -0.45, z: 0}
+    UiPos: {x: -3.4, y: 22, z: 0}
     spr: {fileID: 176928774, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 60
     ep: 5
@@ -68585,6 +68483,10 @@ MonoBehaviour:
   - name: Oxtai
     description: Oxtai are bulky creatures that move slowly. They are known for their
       intense focus to small details.
+    wpnPos: {x: -0.002, y: -0.12, z: 0}
+    hatPos: {x: -0.016, y: 0.219, z: 0}
+    highlightPos: {x: 0, y: -0.454, z: 0}
+    UiPos: {x: -5.5, y: 2, z: 0}
     spr: {fileID: -788893831, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 15
@@ -68643,6 +68545,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Mini
     description: Mini are the tiniest creatures in the lands.
+    wpnPos: {x: 0.125, y: -0.295, z: 0}
+    hatPos: {x: 0.016, y: -0.097, z: 0}
+    highlightPos: {x: 0.019, y: -0.454, z: 0}
+    UiPos: {x: -0.7, y: -27.4, z: 0}
     spr: {fileID: -1409414255, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 5
     ep: 5
@@ -68701,6 +68607,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Troll
     description: Trolls are large creatures known for their regenerative qualities.
+    wpnPos: {x: 0.06, y: -0.076, z: 0}
+    hatPos: {x: 0.055, y: 0.376, z: 0}
+    highlightPos: {x: 0.048, y: -0.458, z: 0}
+    UiPos: {x: 2.3, y: 17.1, z: 0}
     spr: {fileID: -1400086961, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 40
     ep: 20
@@ -68759,6 +68669,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Trollblood
     description: 'Trollbloods are half human and half troll. '
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 2009121326, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 20
     ep: 7
@@ -68817,6 +68731,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Treant*
     description: Treants are living tree people.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -1980840693, guid: 401267339216ce046b18215baa1b74fc, type: 3}
     hp: 38
     ep: 10
@@ -68875,6 +68793,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Slaveone
     description: Slaveones are weak humans that have been slaves their entire lives.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 770739894, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 15
     ep: 25
@@ -68933,6 +68855,10 @@ MonoBehaviour:
       flatCostReduction: 1
   - name: Scarr
     description: Scarr intimidate their enemies and make them afraid to fight.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -743916536, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 26
     ep: 5
@@ -68991,6 +68917,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Vampire Spawn
     description: Vampire Spawn are low-level vampires.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -1769593672, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 6
@@ -69049,6 +68979,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: True Vampire
     description: True Vampires are TRUE!
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -565344590, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 35
     ep: 7
@@ -69107,6 +69041,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Insectoid
     description: Insectoids are humanoid insects.
+    wpnPos: {x: 0.034, y: -0.129, z: 0}
+    hatPos: {x: -0.013, y: 0.243, z: 0}
+    highlightPos: {x: -0.001, y: -0.435, z: 0}
+    UiPos: {x: -4.8, y: 5.7, z: 0}
     spr: {fileID: -551352464, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 17
     ep: 12
@@ -69163,66 +69101,12 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
-  - name: Rockle
-    description: Rockles are made out of rocks.
-    spr: {fileID: -1943823846, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
-    hp: 25
-    ep: 25
-    power: 12
-    def: 6
-    actionSpeed: 8
-    epGain: 5
-    range: 0
-    moveSpeed: 0.5
-    cost: 4
-    passive:
-      name: Rock Skin
-      description: +10 defense until attacked 10 times.
-      type: 3
-      condition: 6
-      target: 0
-      flatHeal: 0
-      flatEpHeal: 0
-      oneTimeHealActivated: 0
-      critDamage: 0
-      critChance: 0
-      moveSpeed: 0
-      power: 0
-      def: 10
-      lifesteal: 0
-      actionSpeed: 0
-      ticTime: 0
-      ticTimer: 0
-      timePassiveActivated: 0
-      timePassiveDeactivated: 0
-      hpThreshold: 0
-      hitAmount: 10
-      atkAmount: 0
-      damageByPowerMultiple: 0
-      flatDamage: 0
-      range: 0
-      aoe: 0
-      status:
-        name: 
-        description: 
-        status: 0
-        statusTime: 0
-        statusTimer: 0
-        ticTime: 0
-        ticTimer: 0
-        ticDamage: 0
-        critDamage: 0
-        critChance: 0
-        moveSpeed: 0
-        power: 0
-        def: 0
-        lifesteal: 0
-        actionSpeed: 0
-      resistedEffect: 0
-      costAmount: 0
-      flatCostReduction: 0
   - name: Minitaur
     description: Minitaur are smaller humanoid minotaurs.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -213043651, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 24
     ep: 5
@@ -69281,6 +69165,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Minotaur
     description: Minotaurs are large creatures with horns.
+    wpnPos: {x: -0.022, y: -0.042, z: 0}
+    hatPos: {x: 0, y: 0.43, z: 0}
+    highlightPos: {x: -0.002, y: -0.45, z: 0}
+    UiPos: {x: -3.4, y: 22, z: 0}
     spr: {fileID: 1980798102, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 36
     ep: 14
@@ -69339,6 +69227,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Ickxtal
     description: Ickxtal are weird creatures with many arms.
+    wpnPos: {x: 0.034, y: -0.129, z: 0}
+    hatPos: {x: -0.013, y: 0.243, z: 0}
+    highlightPos: {x: -0.001, y: -0.435, z: 0}
+    UiPos: {x: -4.8, y: 5.7, z: 0}
     spr: {fileID: 340039010, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 16
     ep: 12
@@ -69397,6 +69289,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Lizardfolk
     description: Lizardfolk are humanoid lizards.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -1300116687, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 8
@@ -69455,6 +69351,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Conductor
     description: Conductors are old janky robots powered by magic.
+    wpnPos: {x: 0.041, y: -0.09, z: 0}
+    hatPos: {x: 0.026, y: 0.278, z: 0}
+    highlightPos: {x: -0.023, y: -0.435, z: 0}
+    UiPos: {x: -3.3, y: 8.5, z: 0}
     spr: {fileID: 415561593, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 30
     ep: 20
@@ -69513,6 +69413,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Unseeing
     description: Unseeing are humans that were born without eyes.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 980432044, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 16
     ep: 8
@@ -69571,6 +69475,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Bloodied
     description: Bloodied have their veins running outside of their body.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 472164145, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 20
     ep: 5
@@ -69629,6 +69537,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Halfling
     description: Halflings start off with a lot of energy but run out quickly.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -347635806, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 12
     ep: 7
@@ -69687,6 +69599,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Wondur
     description: Wondur speed up overtime and end up extremely fast.
+    wpnPos: {x: 0.041, y: -0.09, z: 0}
+    hatPos: {x: 0.026, y: 0.278, z: 0}
+    highlightPos: {x: -0.023, y: -0.435, z: 0}
+    UiPos: {x: -3.3, y: 8.5, z: 0}
     spr: {fileID: 1162126527, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 22
     ep: 7
@@ -69745,6 +69661,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Speedle
     description: Speedles get extremely hyper over time.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -1665300379, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 12
     ep: 5
@@ -69803,6 +69723,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Eyedoll
     description: Eyedolls are creatures with one big eye
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -874979617, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 35
     ep: 5
@@ -69861,6 +69785,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Dasher
     description: Dashers use their attack momentum in tandem with their movement.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -23030168, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 8
@@ -69919,6 +69847,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Sea Folk
     description: Sea Folk expand their muscles as they get hurt.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 1684882670, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 5
@@ -69977,6 +69909,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Porcupine
     description: Porcupines are creatures with spikes coming out of their back.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 1238682483, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 30
     ep: 10
@@ -70035,6 +69971,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Spike Husk
     description: Spike Husks metal creatures made out of spikes.
+    wpnPos: {x: 0.041, y: -0.09, z: 0}
+    hatPos: {x: 0.026, y: 0.278, z: 0}
+    highlightPos: {x: -0.023, y: -0.435, z: 0}
+    UiPos: {x: -3.3, y: 8.5, z: 0}
     spr: {fileID: 1996005961, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 40
     ep: 25
@@ -70091,124 +70031,12 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
-  - name: Moon Elf
-    description: Moon Elves have a special connection with the moon.
-    spr: {fileID: 1171775835, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
-    hp: 12
-    ep: 8
-    power: 9
-    def: 0
-    actionSpeed: 2
-    epGain: 2
-    range: 0
-    moveSpeed: 2
-    cost: 1
-    passive:
-      name: Moon Beams
-      description: +3 hp to a random ally every 4 seconds.
-      type: 4
-      condition: 1
-      target: 3
-      flatHeal: 3
-      flatEpHeal: 0
-      oneTimeHealActivated: 0
-      critDamage: 0
-      critChance: 0
-      moveSpeed: 0
-      power: 0
-      def: 0
-      lifesteal: 0
-      actionSpeed: 0
-      ticTime: 4
-      ticTimer: 0
-      timePassiveActivated: 0
-      timePassiveDeactivated: 0
-      hpThreshold: 0
-      hitAmount: 0
-      atkAmount: 0
-      damageByPowerMultiple: 0
-      flatDamage: 0
-      range: 0
-      aoe: 0
-      status:
-        name: 
-        description: 
-        status: 0
-        statusTime: 0
-        statusTimer: 0
-        ticTime: 0
-        ticTimer: 0
-        ticDamage: 0
-        critDamage: 0
-        critChance: 0
-        moveSpeed: 0
-        power: 0
-        def: 0
-        lifesteal: 0
-        actionSpeed: 0
-      resistedEffect: 0
-      costAmount: 0
-      flatCostReduction: 0
-  - name: Sun Elf
-    description: Sun Elves have a special connection with the sun.
-    spr: {fileID: -289351389, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
-    hp: 17
-    ep: 8
-    power: 10
-    def: 1
-    actionSpeed: 2.5
-    epGain: 2
-    range: 0
-    moveSpeed: 1.5
-    cost: 1
-    passive:
-      name: Sun Beams
-      description: 3 damage to a random enemy every 3 seconds.
-      type: 1
-      condition: 1
-      target: 4
-      flatHeal: 0
-      flatEpHeal: 0
-      oneTimeHealActivated: 0
-      critDamage: 0
-      critChance: 0
-      moveSpeed: 0
-      power: 0
-      def: 0
-      lifesteal: 0
-      actionSpeed: 0
-      ticTime: 3
-      ticTimer: 0
-      timePassiveActivated: 0
-      timePassiveDeactivated: 0
-      hpThreshold: 0
-      hitAmount: 0
-      atkAmount: 0
-      damageByPowerMultiple: 0
-      flatDamage: 3
-      range: 0
-      aoe: 0
-      status:
-        name: 
-        description: 
-        status: 0
-        statusTime: 0
-        statusTimer: 0
-        ticTime: 0
-        ticTimer: 0
-        ticDamage: 0
-        critDamage: 0
-        critChance: 0
-        moveSpeed: 0
-        power: 0
-        def: 0
-        lifesteal: 0
-        actionSpeed: 0
-      resistedEffect: 0
-      costAmount: 0
-      flatCostReduction: 0
   - name: Pained One
     description: Pained Ones are beings made of pure hatred.
+    wpnPos: {x: 0.074, y: -0.159, z: 0}
+    hatPos: {x: 0.125, y: 0.184, z: 0}
+    highlightPos: {x: -0.002, y: -0.453, z: 0}
+    UiPos: {x: 9.9, y: -1.4, z: 0}
     spr: {fileID: 344103128, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 10
     ep: 5
@@ -70267,6 +70095,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Loved One
     description: Loved Ones are beings made out of pure love.
+    wpnPos: {x: 0.074, y: -0.159, z: 0}
+    hatPos: {x: 0.125, y: 0.184, z: 0}
+    highlightPos: {x: -0.002, y: -0.453, z: 0}
+    UiPos: {x: 9.9, y: -1.4, z: 0}
     spr: {fileID: -1592234696, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 10
     ep: 5
@@ -70323,8 +70155,74 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
+  - name: Earthoid
+    description: Earthoids are humanoids made out of earth.
+    wpnPos: {x: 0.041, y: -0.09, z: 0}
+    hatPos: {x: 0, y: 0.278, z: 0}
+    highlightPos: {x: -0.023, y: -0.435, z: 0}
+    UiPos: {x: -3.3, y: 8.5, z: 0}
+    spr: {fileID: 1809095152, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
+    hp: 23
+    ep: 5
+    power: 3
+    def: 3
+    actionSpeed: 5
+    epGain: 3
+    range: 1
+    moveSpeed: 1
+    cost: 1
+    passive:
+      name: Solid
+      description: Immune to push.
+      type: 0
+      condition: 0
+      target: 5
+      flatHeal: 0
+      flatEpHeal: 0
+      oneTimeHealActivated: 0
+      critDamage: 0
+      critChance: 0
+      moveSpeed: 0
+      power: 0
+      def: 0
+      lifesteal: 0
+      actionSpeed: 0
+      ticTime: 0
+      ticTimer: 0
+      timePassiveActivated: 0
+      timePassiveDeactivated: 0
+      hpThreshold: 0
+      hitAmount: 0
+      atkAmount: 0
+      damageByPowerMultiple: 0
+      flatDamage: 0
+      range: 0
+      aoe: 0
+      status:
+        name: 0
+        description: 0
+        status: 0
+        statusTime: 0
+        statusTimer: 0
+        ticTime: 0
+        ticTimer: 0
+        ticDamage: 0
+        critDamage: 0
+        critChance: 0
+        moveSpeed: 0
+        power: 0
+        def: 0
+        lifesteal: 0
+        actionSpeed: 0
+      resistedEffect: 12
+      costAmount: 0
+      flatCostReduction: 0
   - name: Birdo
     description: Birdo use the wind of their wings to speed up their allies.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -2068448209, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 10
@@ -70383,6 +70281,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Gnome
     description: Gnomes imbue their allies with their smart inventions.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: 1555445249, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 18
     ep: 18
@@ -70441,6 +70343,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Satyr
     description: Stayr make their allies dance in a way that somehow defends them.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -713079026, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 20
     ep: 5
@@ -70499,6 +70405,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Wind One
     description: Wind Ones use the wind to speed up their allies.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -696861271, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 30
     ep: 12
@@ -70557,6 +70467,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Cracklo
     description: Cracklo rust the armor of their enemies
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: 17158786, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 24
     ep: 12
@@ -70615,6 +70529,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Slow One
     description: Slow Ones are the slowest in the land.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: 1731769992, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 20
@@ -70673,6 +70591,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Downer
     description: Downers are made out of goop.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -1968370868, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 23
     ep: 12
@@ -70731,6 +70653,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Prismat
     description: Prismat are half human and half primatar.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 998073361, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 28
     ep: 9
@@ -70789,6 +70715,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Prismatar
     description: Prismatar come from another plane of existence.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 786251827, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 40
     ep: 15
@@ -70847,6 +70777,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Blood One
     description: Blood Ones enhance their allies understanding of the blood realm.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -1609398028, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 24
     ep: 8
@@ -70905,6 +70839,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Goblorc
     description: Goblorcs are half goblin and half orc.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -803885287, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 22
     ep: 15
@@ -70963,6 +70901,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Half-Elf
     description: Half-Elves are half human and half elf.
+    wpnPos: {x: 0.093, y: -0.132, z: 0}
+    hatPos: {x: 0.031, y: 0.188, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: -0.9, y: -2.9, z: 0}
     spr: {fileID: -2047460656, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 16
     ep: 8
@@ -71019,8 +70961,198 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
+  - name: Moon Elf
+    description: Moon Elves have a special connection with the moon.
+    wpnPos: {x: 0.059, y: -0.071, z: 0}
+    hatPos: {x: -0.001, y: 0.248, z: 0}
+    highlightPos: {x: -0.016, y: -0.435, z: 0}
+    UiPos: {x: -4.5, y: 4.9, z: 0}
+    spr: {fileID: 1171775835, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
+    hp: 12
+    ep: 8
+    power: 9
+    def: 0
+    actionSpeed: 2
+    epGain: 2
+    range: 0
+    moveSpeed: 2
+    cost: 1
+    passive:
+      name: Moon Beams
+      description: +3 hp to a random ally every 4 seconds.
+      type: 4
+      condition: 1
+      target: 3
+      flatHeal: 3
+      flatEpHeal: 0
+      oneTimeHealActivated: 0
+      critDamage: 0
+      critChance: 0
+      moveSpeed: 0
+      power: 0
+      def: 0
+      lifesteal: 0
+      actionSpeed: 0
+      ticTime: 4
+      ticTimer: 0
+      timePassiveActivated: 0
+      timePassiveDeactivated: 0
+      hpThreshold: 0
+      hitAmount: 0
+      atkAmount: 0
+      damageByPowerMultiple: 0
+      flatDamage: 0
+      range: 0
+      aoe: 0
+      status:
+        name: 
+        description: 
+        status: 0
+        statusTime: 0
+        statusTimer: 0
+        ticTime: 0
+        ticTimer: 0
+        ticDamage: 0
+        critDamage: 0
+        critChance: 0
+        moveSpeed: 0
+        power: 0
+        def: 0
+        lifesteal: 0
+        actionSpeed: 0
+      resistedEffect: 0
+      costAmount: 0
+      flatCostReduction: 0
+  - name: Sun Elf
+    description: Sun Elves have a special connection with the sun.
+    wpnPos: {x: 0.059, y: -0.071, z: 0}
+    hatPos: {x: -0.001, y: 0.248, z: 0}
+    highlightPos: {x: -0.016, y: -0.435, z: 0}
+    UiPos: {x: -4.5, y: 4.9, z: 0}
+    spr: {fileID: -289351389, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
+    hp: 17
+    ep: 8
+    power: 10
+    def: 1
+    actionSpeed: 2.5
+    epGain: 2
+    range: 0
+    moveSpeed: 1.5
+    cost: 1
+    passive:
+      name: Sun Beams
+      description: 3 damage to a random enemy every 3 seconds.
+      type: 1
+      condition: 1
+      target: 4
+      flatHeal: 0
+      flatEpHeal: 0
+      oneTimeHealActivated: 0
+      critDamage: 0
+      critChance: 0
+      moveSpeed: 0
+      power: 0
+      def: 0
+      lifesteal: 0
+      actionSpeed: 0
+      ticTime: 3
+      ticTimer: 0
+      timePassiveActivated: 0
+      timePassiveDeactivated: 0
+      hpThreshold: 0
+      hitAmount: 0
+      atkAmount: 0
+      damageByPowerMultiple: 0
+      flatDamage: 3
+      range: 0
+      aoe: 0
+      status:
+        name: 
+        description: 
+        status: 0
+        statusTime: 0
+        statusTimer: 0
+        ticTime: 0
+        ticTimer: 0
+        ticDamage: 0
+        critDamage: 0
+        critChance: 0
+        moveSpeed: 0
+        power: 0
+        def: 0
+        lifesteal: 0
+        actionSpeed: 0
+      resistedEffect: 0
+      costAmount: 0
+      flatCostReduction: 0
+  - name: High Elf
+    description: High Elves are closer to the true form of the Elves.
+    wpnPos: {x: 0.059, y: -0.071, z: 0}
+    hatPos: {x: -0.001, y: 0.248, z: 0}
+    highlightPos: {x: -0.016, y: -0.435, z: 0}
+    UiPos: {x: -4.5, y: 4.9, z: 0}
+    spr: {fileID: -289351389, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
+    hp: 32
+    ep: 12
+    power: 7
+    def: 3
+    actionSpeed: 2.5
+    epGain: 2
+    range: 0
+    moveSpeed: 2
+    cost: 3
+    passive:
+      name: Double Strike
+      description: Every attack hits a second time for half your power.
+      type: 1
+      condition: 11
+      target: 2
+      flatHeal: 0
+      flatEpHeal: 0
+      oneTimeHealActivated: 0
+      critDamage: 0
+      critChance: 0
+      moveSpeed: 0
+      power: 0
+      def: 0
+      lifesteal: 0
+      actionSpeed: 0
+      ticTime: 0
+      ticTimer: 0
+      timePassiveActivated: 0
+      timePassiveDeactivated: 0
+      hpThreshold: 0
+      hitAmount: 0
+      atkAmount: 0
+      damageByPowerMultiple: 0.5
+      flatDamage: 0
+      range: 0
+      aoe: 0
+      status:
+        name: 
+        description: 
+        status: 0
+        statusTime: 0
+        statusTimer: 0
+        ticTime: 0
+        ticTimer: 0
+        ticDamage: 0
+        critDamage: 0
+        critChance: 0
+        moveSpeed: 0
+        power: 0
+        def: 0
+        lifesteal: 0
+        actionSpeed: 0
+      resistedEffect: 0
+      costAmount: 0
+      flatCostReduction: 0
   - name: True Elf
     description: True Elves are the Elves of legend. They are extremely nimble.
+    wpnPos: {x: 0.059, y: -0.071, z: 0}
+    hatPos: {x: -0.001, y: 0.248, z: 0}
+    highlightPos: {x: -0.016, y: -0.435, z: 0}
+    UiPos: {x: -4.5, y: 4.9, z: 0}
     spr: {fileID: -1064973063, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 42
     ep: 12
@@ -71077,8 +71209,74 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
+  - name: Rockle
+    description: Rockles are made out of rocks.
+    wpnPos: {x: 0.041, y: -0.09, z: 0}
+    hatPos: {x: 0.026, y: 0.278, z: 0}
+    highlightPos: {x: -0.023, y: -0.435, z: 0}
+    UiPos: {x: -3.3, y: 8.5, z: 0}
+    spr: {fileID: -1943823846, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
+    hp: 25
+    ep: 25
+    power: 12
+    def: 6
+    actionSpeed: 8
+    epGain: 5
+    range: 0
+    moveSpeed: 0.5
+    cost: 4
+    passive:
+      name: Rock Skin
+      description: +10 defense until attacked 10 times.
+      type: 3
+      condition: 6
+      target: 0
+      flatHeal: 0
+      flatEpHeal: 0
+      oneTimeHealActivated: 0
+      critDamage: 0
+      critChance: 0
+      moveSpeed: 0
+      power: 0
+      def: 10
+      lifesteal: 0
+      actionSpeed: 0
+      ticTime: 0
+      ticTimer: 0
+      timePassiveActivated: 0
+      timePassiveDeactivated: 0
+      hpThreshold: 0
+      hitAmount: 10
+      atkAmount: 0
+      damageByPowerMultiple: 0
+      flatDamage: 0
+      range: 0
+      aoe: 0
+      status:
+        name: 
+        description: 
+        status: 0
+        statusTime: 0
+        statusTimer: 0
+        ticTime: 0
+        ticTimer: 0
+        ticDamage: 0
+        critDamage: 0
+        critChance: 0
+        moveSpeed: 0
+        power: 0
+        def: 0
+        lifesteal: 0
+        actionSpeed: 0
+      resistedEffect: 0
+      costAmount: 0
+      flatCostReduction: 0
   - name: Striper
     description: Stripers are humanoids with stripes that go across their skin.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 1004700263, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 32
     ep: 9
@@ -71137,6 +71335,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Striped Soul
     description: Striped Souls are one with the stripes.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 1461412648, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 50
     ep: 12
@@ -71195,6 +71397,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Rageblood
     description: Rageblood are half human and half rageborn.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -1678764955, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 22
     ep: 5
@@ -71251,66 +71457,12 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
-  - name: Rageborn
-    description: Rageborn are larger humans known for their anger issues.
-    spr: {fileID: -1022196916, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
-    hp: 35
-    ep: 12
-    power: 6
-    def: 5
-    actionSpeed: 4
-    epGain: 3
-    range: 1
-    moveSpeed: 1.5
-    cost: 3
-    passive:
-      name: Rage+
-      description: After being attacked 10 times, gain 10 power.
-      type: 3
-      condition: 7
-      target: 5
-      flatHeal: 0
-      flatEpHeal: 0
-      oneTimeHealActivated: 0
-      critDamage: 0
-      critChance: 0
-      moveSpeed: 0
-      power: 10
-      def: 0
-      lifesteal: 0
-      actionSpeed: 0
-      ticTime: 0
-      ticTimer: 0
-      timePassiveActivated: 0
-      timePassiveDeactivated: 0
-      hpThreshold: 0
-      hitAmount: 10
-      atkAmount: 0
-      damageByPowerMultiple: 0
-      flatDamage: 0
-      range: 0
-      aoe: 0
-      status:
-        name: 
-        description: 
-        status: 0
-        statusTime: 0
-        statusTimer: 0
-        ticTime: 0
-        ticTimer: 0
-        ticDamage: 0
-        critDamage: 0
-        critChance: 0
-        moveSpeed: 0
-        power: 0
-        def: 0
-        lifesteal: 0
-        actionSpeed: 0
-      resistedEffect: 0
-      costAmount: 0
-      flatCostReduction: 0
   - name: Unicorn
     description: Unicorns are creatures of true positivity.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -929991666, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 35
     ep: 12
@@ -71369,6 +71521,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Deathcorn
     description: Deathcorn are evil unicorns that spread death across the world.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -16484547, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 30
     ep: 12
@@ -71427,6 +71583,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Feral
     description: Feral are catlike creatures that claw deep.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -1789104487, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 10
@@ -71485,6 +71645,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Jelly
     description: 'Jellys are big jello monsters that you sink your weapons in. '
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: 428583664, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 35
     ep: 12
@@ -71541,8 +71705,136 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
+  - name: Airoid
+    description: Airoids are humanoids made out of air.
+    wpnPos: {x: 0.041, y: -0.09, z: 0}
+    hatPos: {x: 0, y: 0.278, z: 0}
+    highlightPos: {x: -0.023, y: -0.435, z: 0}
+    UiPos: {x: -3.3, y: 8.5, z: 0}
+    spr: {fileID: -696861271, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
+    hp: 19
+    ep: 10
+    power: 5
+    def: 2
+    actionSpeed: 2.5
+    epGain: 2
+    range: 0
+    moveSpeed: 3
+    cost: 1
+    passive:
+      name: Gravity
+      description: Pull immune.
+      type: 0
+      condition: 0
+      target: 0
+      flatHeal: 0
+      flatEpHeal: 0
+      oneTimeHealActivated: 0
+      critDamage: 0
+      critChance: 0
+      moveSpeed: 0
+      power: 0
+      def: 0
+      lifesteal: 0
+      actionSpeed: 0
+      ticTime: 0
+      ticTimer: 0
+      timePassiveActivated: 0
+      timePassiveDeactivated: 0
+      hpThreshold: 0
+      hitAmount: 0
+      atkAmount: 0
+      damageByPowerMultiple: 0
+      flatDamage: 0
+      range: 0
+      aoe: 0
+      status:
+        name: 
+        description: 
+        status: 0
+        statusTime: 0
+        statusTimer: 0
+        ticTime: 0
+        ticTimer: 0
+        ticDamage: 0
+        critDamage: 0
+        critChance: 0
+        moveSpeed: 0
+        power: 0
+        def: 0
+        lifesteal: 0
+        actionSpeed: 0
+      resistedEffect: 13
+      costAmount: 0
+      flatCostReduction: 0
+  - name: Fireoid
+    description: Fireoids are humanoids imbued with fire.
+    wpnPos: {x: 0.041, y: -0.09, z: 0}
+    hatPos: {x: 0, y: 0.278, z: 0}
+    highlightPos: {x: -0.023, y: -0.435, z: 0}
+    UiPos: {x: -3.3, y: 8.5, z: 0}
+    spr: {fileID: -1209726172, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
+    hp: 18
+    ep: 8
+    power: 7
+    def: 1
+    actionSpeed: 2.5
+    epGain: 5
+    range: 1
+    moveSpeed: 1.5
+    cost: 1
+    passive:
+      name: Burn Immune
+      description: Immune to burn.
+      type: 0
+      condition: 0
+      target: 0
+      flatHeal: 0
+      flatEpHeal: 0
+      oneTimeHealActivated: 0
+      critDamage: 0
+      critChance: 0
+      moveSpeed: 0
+      power: 0
+      def: 0
+      lifesteal: 0
+      actionSpeed: 0
+      ticTime: 0
+      ticTimer: 0
+      timePassiveActivated: 0
+      timePassiveDeactivated: 0
+      hpThreshold: 0
+      hitAmount: 0
+      atkAmount: 0
+      damageByPowerMultiple: 0
+      flatDamage: 0
+      range: 0
+      aoe: 0
+      status:
+        name: 
+        description: 
+        status: 0
+        statusTime: 0
+        statusTimer: 0
+        ticTime: 0
+        ticTimer: 0
+        ticDamage: 0
+        critDamage: 0
+        critChance: 0
+        moveSpeed: 0
+        power: 0
+        def: 0
+        lifesteal: 0
+        actionSpeed: 0
+      resistedEffect: 1
+      costAmount: 0
+      flatCostReduction: 0
   - name: Iceoid
     description: Iceoids are creatures made out of ice.
+    wpnPos: {x: 0.041, y: -0.09, z: 0}
+    hatPos: {x: 0, y: 0.278, z: 0}
+    highlightPos: {x: -0.023, y: -0.435, z: 0}
+    UiPos: {x: -3.3, y: 8.5, z: 0}
     spr: {fileID: -33490640, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 22
     ep: 12
@@ -71599,9 +71891,75 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
+  - name: Wateroid
+    description: Wateroids are humanoids imbued with water.
+    wpnPos: {x: 0.041, y: -0.09, z: 0}
+    hatPos: {x: 0, y: 0.278, z: 0}
+    highlightPos: {x: -0.023, y: -0.435, z: 0}
+    UiPos: {x: -3.3, y: 8.5, z: 0}
+    spr: {fileID: 1951932221, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
+    hp: 22
+    ep: 10
+    power: 3
+    def: 2
+    actionSpeed: 3
+    epGain: 5
+    range: 0
+    moveSpeed: 1.5
+    cost: 2
+    passive:
+      name: Self Preservation
+      description: Heal for 5 hp every time you are attacked.
+      type: 4
+      condition: 12
+      target: 5
+      flatHeal: 5
+      flatEpHeal: 0
+      oneTimeHealActivated: 0
+      critDamage: 0
+      critChance: 0
+      moveSpeed: 0
+      power: 0
+      def: 0
+      lifesteal: 0
+      actionSpeed: 0
+      ticTime: 0
+      ticTimer: 0
+      timePassiveActivated: 0
+      timePassiveDeactivated: 0
+      hpThreshold: 0
+      hitAmount: 0
+      atkAmount: 0
+      damageByPowerMultiple: 0
+      flatDamage: 0
+      range: 0
+      aoe: 0
+      status:
+        name: 
+        description: 
+        status: 0
+        statusTime: 0
+        statusTimer: 0
+        ticTime: 0
+        ticTimer: 0
+        ticDamage: 0
+        critDamage: 0
+        critChance: 0
+        moveSpeed: 0
+        power: 0
+        def: 0
+        lifesteal: 0
+        actionSpeed: 0
+      resistedEffect: 0
+      costAmount: 0
+      flatCostReduction: 0
   - name: Taker
     description: Takers use the lifeforce of their allies to steal life from their
       enemies.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -247875255, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 28
     ep: 7
@@ -71658,8 +72016,74 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
+  - name: Hider
+    description: Hiders are little creatures that use their allies are meat shields.
+    wpnPos: {x: 0.096, y: -0.288, z: 0}
+    hatPos: {x: 0, y: -0.063, z: 0}
+    highlightPos: {x: 0.017, y: -0.449, z: 0}
+    UiPos: {x: -3.2, y: -25.4, z: 0}
+    spr: {fileID: 1631146032, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
+    hp: 12
+    ep: 7
+    power: 6
+    def: 0
+    actionSpeed: 1.75
+    epGain: 2
+    range: 1
+    moveSpeed: 2
+    cost: 1
+    passive:
+      name: Bodyguards
+      description: +1 def for every active ally.
+      type: 3
+      condition: 10
+      target: 0
+      flatHeal: 0
+      flatEpHeal: 0
+      oneTimeHealActivated: 0
+      critDamage: 0
+      critChance: 0
+      moveSpeed: 0
+      power: 0
+      def: 1
+      lifesteal: 0
+      actionSpeed: 0
+      ticTime: 0
+      ticTimer: 0
+      timePassiveActivated: 0
+      timePassiveDeactivated: 0
+      hpThreshold: 0
+      hitAmount: 0
+      atkAmount: 0
+      damageByPowerMultiple: 0
+      flatDamage: 0
+      range: 0
+      aoe: 0
+      status:
+        name: 
+        description: 
+        status: 0
+        statusTime: 0
+        statusTimer: 0
+        ticTime: 0
+        ticTimer: 0
+        ticDamage: 0
+        critDamage: 0
+        critChance: 0
+        moveSpeed: 0
+        power: 0
+        def: 0
+        lifesteal: 0
+        actionSpeed: 0
+      resistedEffect: 0
+      costAmount: 0
+      flatCostReduction: 0
   - name: Speedo
     description: Speedos use their allies are boosts to move around.
+    wpnPos: {x: 0.084, y: -0.196, z: 0}
+    hatPos: {x: 0.032, y: 0.091, z: 0}
+    highlightPos: {x: 0.017, y: -0.453, z: 0}
+    UiPos: {x: 0.1, y: -11.5, z: 0}
     spr: {fileID: -1986631684, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 16
     ep: 5
@@ -71718,6 +72142,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Embra
     description: Embras use the energy of their allies to empower their speed.
+    wpnPos: {x: 0.084, y: -0.196, z: 0}
+    hatPos: {x: 0.032, y: 0.091, z: 0}
+    highlightPos: {x: 0.017, y: -0.453, z: 0}
+    UiPos: {x: 0.1, y: -11.5, z: 0}
     spr: {fileID: -712473020, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 16
     ep: 8
@@ -71774,67 +72202,13 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
-  - name: Hider
-    description: Hiders are little creatures that use their allies are meat shields.
-    spr: {fileID: 1631146032, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
-    hp: 12
-    ep: 7
-    power: 6
-    def: 0
-    actionSpeed: 1.75
-    epGain: 2
-    range: 1
-    moveSpeed: 2
-    cost: 1
-    passive:
-      name: Bodyguards
-      description: +1 def for every active ally.
-      type: 3
-      condition: 10
-      target: 0
-      flatHeal: 0
-      flatEpHeal: 0
-      oneTimeHealActivated: 0
-      critDamage: 0
-      critChance: 0
-      moveSpeed: 0
-      power: 0
-      def: 1
-      lifesteal: 0
-      actionSpeed: 0
-      ticTime: 0
-      ticTimer: 0
-      timePassiveActivated: 0
-      timePassiveDeactivated: 0
-      hpThreshold: 0
-      hitAmount: 0
-      atkAmount: 0
-      damageByPowerMultiple: 0
-      flatDamage: 0
-      range: 0
-      aoe: 0
-      status:
-        name: 
-        description: 
-        status: 0
-        statusTime: 0
-        statusTimer: 0
-        ticTime: 0
-        ticTimer: 0
-        ticDamage: 0
-        critDamage: 0
-        critChance: 0
-        moveSpeed: 0
-        power: 0
-        def: 0
-        lifesteal: 0
-        actionSpeed: 0
-      resistedEffect: 0
-      costAmount: 0
-      flatCostReduction: 0
   - name: Faux Troll
     description: Faux Trolls are an offbreed of Trolls that gain all their regeneration
       at once.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -1125186719, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 10
@@ -71893,6 +72267,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Infusi
     description: Infusi gain a boost of adrenaline when they drop to low hp.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: 275929064, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 50
     ep: 16
@@ -71951,6 +72329,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Turtle
     description: Turtles have a soft shell that helps them defend.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: 1108034345, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 20
     ep: 12
@@ -72009,6 +72391,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Crux
     description: Crux are very hard to take down while at low health.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -624825231, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 20
     ep: 8
@@ -72067,6 +72453,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Diq
     description: Diq lose confidence when they aren't healthy.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -1895397655, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 22
     ep: 5
@@ -72125,6 +72515,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Diq Diq
     description: Diq Diqs get extremely aggressive when boxed into a corner.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -1560523886, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 18
     ep: 5
@@ -72183,6 +72577,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Defier
     description: Defier were once a race of slaves that defied their mentors.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: 1642646630, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 30
     ep: 9
@@ -72240,8 +72638,74 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
+  - name: Rageborn
+    description: Rageborn are larger humans known for their anger issues.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
+    spr: {fileID: -1022196916, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
+    hp: 35
+    ep: 12
+    power: 6
+    def: 5
+    actionSpeed: 4
+    epGain: 3
+    range: 1
+    moveSpeed: 1.5
+    cost: 3
+    passive:
+      name: Rage+
+      description: After being attacked 10 times, gain 10 power.
+      type: 3
+      condition: 7
+      target: 5
+      flatHeal: 0
+      flatEpHeal: 0
+      oneTimeHealActivated: 0
+      critDamage: 0
+      critChance: 0
+      moveSpeed: 0
+      power: 10
+      def: 0
+      lifesteal: 0
+      actionSpeed: 0
+      ticTime: 0
+      ticTimer: 0
+      timePassiveActivated: 0
+      timePassiveDeactivated: 0
+      hpThreshold: 0
+      hitAmount: 10
+      atkAmount: 0
+      damageByPowerMultiple: 0
+      flatDamage: 0
+      range: 0
+      aoe: 0
+      status:
+        name: 
+        description: 
+        status: 0
+        statusTime: 0
+        statusTimer: 0
+        ticTime: 0
+        ticTimer: 0
+        ticDamage: 0
+        critDamage: 0
+        critChance: 0
+        moveSpeed: 0
+        power: 0
+        def: 0
+        lifesteal: 0
+        actionSpeed: 0
+      resistedEffect: 0
+      costAmount: 0
+      flatCostReduction: 0
   - name: Poliar
     description: Poliar are able to stay very mobile as long as they are healthy.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: 198062536, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 25
     ep: 5
@@ -72300,6 +72764,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Landor
     description: Landors go into a frenzy when they drop to low hp.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: 1518608616, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 30
     ep: 5
@@ -72358,6 +72826,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Fartoy
     description: Fartoy are quick to retreat when they are afraid.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: 985121748, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 12
     ep: 5
@@ -72416,6 +72888,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Quicklo
     description: Quicko are skinny humanoids that move quickly.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: -1980840693, guid: 401267339216ce046b18215baa1b74fc, type: 3}
     hp: 15
     ep: 5
@@ -72474,6 +72950,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Essence
     description: Essence are beings made out of material and energy.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: 0.031, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -428064507, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 22
     ep: 12
@@ -72532,6 +73012,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: True Essence
     description: True Essence are made out of pure energy.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: -0.139, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: -18550610, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 34
     ep: 10
@@ -72590,6 +73074,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Doof
     description: Doofs are useless.
+    wpnPos: {x: 0, y: 0, z: 0}
+    hatPos: {x: 0, y: 0, z: 0}
+    highlightPos: {x: 0, y: 0, z: 0}
+    UiPos: {x: 0, y: 0, z: 0}
     spr: {fileID: 848852003, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 15
     ep: 5
@@ -72646,67 +73134,13 @@ MonoBehaviour:
       resistedEffect: 0
       costAmount: 0
       flatCostReduction: 0
-  - name: Earthoid
-    description: Earthoids are humanoids made out of earth.
-    spr: {fileID: 1809095152, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
-    hp: 23
-    ep: 5
-    power: 3
-    def: 3
-    actionSpeed: 5
-    epGain: 3
-    range: 1
-    moveSpeed: 1
-    cost: 1
-    passive:
-      name: Solid
-      description: Immune to push.
-      type: 0
-      condition: 0
-      target: 5
-      flatHeal: 0
-      flatEpHeal: 0
-      oneTimeHealActivated: 0
-      critDamage: 0
-      critChance: 0
-      moveSpeed: 0
-      power: 0
-      def: 0
-      lifesteal: 0
-      actionSpeed: 0
-      ticTime: 0
-      ticTimer: 0
-      timePassiveActivated: 0
-      timePassiveDeactivated: 0
-      hpThreshold: 0
-      hitAmount: 0
-      atkAmount: 0
-      damageByPowerMultiple: 0
-      flatDamage: 0
-      range: 0
-      aoe: 0
-      status:
-        name: 0
-        description: 0
-        status: 0
-        statusTime: 0
-        statusTimer: 0
-        ticTime: 0
-        ticTimer: 0
-        ticDamage: 0
-        critDamage: 0
-        critChance: 0
-        moveSpeed: 0
-        power: 0
-        def: 0
-        lifesteal: 0
-        actionSpeed: 0
-      resistedEffect: 12
-      costAmount: 0
-      flatCostReduction: 0
   - name: Gargoyle
     description: Gargoyles are creatures made out of metal and known for their ability
       to disguise themselves.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: -0.139, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 1221621378, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 24
     ep: 12
@@ -72765,6 +73199,10 @@ MonoBehaviour:
       flatCostReduction: 0
   - name: Dragonblood
     description: Dragonbloods are half human and half dragon.
+    wpnPos: {x: 0.09, y: -0.139, z: 0}
+    hatPos: {x: -0.139, y: 0.169, z: 0}
+    highlightPos: {x: 0.015, y: -0.435, z: 0}
+    UiPos: {x: 0, y: -2.1, z: 0}
     spr: {fileID: 943916045, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
     hp: 35
     ep: 12
@@ -72811,64 +73249,6 @@ MonoBehaviour:
         ticTime: 0.25
         ticTimer: 0
         ticDamage: 3
-        critDamage: 0
-        critChance: 0
-        moveSpeed: 0
-        power: 0
-        def: 0
-        lifesteal: 0
-        actionSpeed: 0
-      resistedEffect: 0
-      costAmount: 0
-      flatCostReduction: 0
-  - name: Wateroid
-    description: Wateroids are humanoids imbued with water.
-    spr: {fileID: 1951932221, guid: dfb73a63b01114748a276e1a6bd40889, type: 3}
-    hp: 22
-    ep: 10
-    power: 3
-    def: 2
-    actionSpeed: 3
-    epGain: 5
-    range: 0
-    moveSpeed: 1.5
-    cost: 2
-    passive:
-      name: Self Preservation
-      description: Heal for 5 hp every time you are attacked.
-      type: 4
-      condition: 12
-      target: 5
-      flatHeal: 5
-      flatEpHeal: 0
-      oneTimeHealActivated: 0
-      critDamage: 0
-      critChance: 0
-      moveSpeed: 0
-      power: 0
-      def: 0
-      lifesteal: 0
-      actionSpeed: 0
-      ticTime: 0
-      ticTimer: 0
-      timePassiveActivated: 0
-      timePassiveDeactivated: 0
-      hpThreshold: 0
-      hitAmount: 0
-      atkAmount: 0
-      damageByPowerMultiple: 0
-      flatDamage: 0
-      range: 0
-      aoe: 0
-      status:
-        name: 
-        description: 
-        status: 0
-        statusTime: 0
-        statusTimer: 0
-        ticTime: 0
-        ticTimer: 0
-        ticDamage: 0
         critDamage: 0
         critChance: 0
         moveSpeed: 0

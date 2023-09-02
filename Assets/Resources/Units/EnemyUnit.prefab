@@ -263,19 +263,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a3313de1eb59b40bf04b06051d202c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  origin: {x: 0, y: 0, z: 0}
+  spr: {fileID: 0}
   spriteRenderer: {fileID: 1121225387997652807}
   wpnRenderer: {fileID: 7184170795857210998}
   hatRenderer: {fileID: 7453333917641936411}
   highlight: {fileID: 1121225387562117399}
-  origin: {x: 0, y: 0, z: 0}
-  spr: {fileID: 0}
+  ui: {fileID: 4552721005718979943}
+  wpnPos: {x: 0, y: 0, z: 0}
+  hatPos: {x: 0, y: 0, z: 0}
+  highlightPos: {x: 0, y: 0, z: 0}
+  uiPos: {x: 0, y: 0, z: 0}
   wpn: {fileID: 0}
   hat: {fileID: 0}
   unitName: 
+  team: 1
+  party: {fileID: 0}
+  speciesName: 
+  speciesDes: 
+  profName: 
+  profDes: 
+  dragging: 0
   currHP: 0
   maxHP: 0
   currEP: 0
   maxEP: 0
+  epGain: 0
+  originalEpGain: 0
+  bonusEpGain: 0
+  auraEpGain: 0
   power: 0
   originalPower: 0
   passivePower: 0
@@ -288,17 +304,13 @@ MonoBehaviour:
   originalAoe: 0
   bonusAoe: 0
   auraAoe: 0
+  range: 0
+  originalRange: 0
+  bonusRange: 0
   actionSpeed: 0
   originalActionSpeed: 0
   passiveActSpeed: 0
   auraActSpeed: 0
-  epGain: 0
-  originalEpGain: 0
-  bonusEpGain: 0
-  auraEpGain: 0
-  range: 0
-  originalRange: 0
-  bonusRange: 0
   critChance: 5
   originalCritChance: 0
   passiveCritChance: 0
@@ -315,18 +327,12 @@ MonoBehaviour:
   originalMoveSpeed: 0
   passiveMoveSpeed: 0
   auraMoveSpeed: 0
-  speciesName: 
-  speciesDes: 
-  profName: 
-  profDes: 
-  team: 1
-  paused: 1
   target: {fileID: 0}
   distanceToTarget: 0
+  paused: 1
   actionTimer: 0
   acting: 0
   dead: 0
-  dragging: 0
   clicked: 0
   attackPriming: 0
   attacking: 0
@@ -388,7 +394,6 @@ MonoBehaviour:
     flatCostReduction: 0
   statuses: []
   resistedStatuses: 
-  party: {fileID: 0}
   hpSlider: {fileID: 420238367833318514}
   epSlider: {fileID: 3797394826498085758}
   hitNumber: 0
@@ -471,7 +476,7 @@ RectTransform:
   m_Children:
   - {fileID: 709955268702413747}
   - {fileID: 4302771241896976394}
-  m_Father: {fileID: 7843551167631186679}
+  m_Father: {fileID: 3027163318362288101}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -561,8 +566,7 @@ RectTransform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3768549717987563486}
-  - {fileID: 3558754325183422812}
+  - {fileID: 3027163318362288101}
   m_Father: {fileID: 1121225387997652806}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -792,6 +796,44 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4552721005718979943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3027163318362288101}
+  m_Layer: 5
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3027163318362288101
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4552721005718979943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3768549717987563486}
+  - {fileID: 3558754325183422812}
+  m_Father: {fileID: 7843551167631186679}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5346382896752928480
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,7 +986,7 @@ RectTransform:
   m_Children:
   - {fileID: 5632365082702974059}
   - {fileID: 6090356286540689783}
-  m_Father: {fileID: 7843551167631186679}
+  m_Father: {fileID: 3027163318362288101}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

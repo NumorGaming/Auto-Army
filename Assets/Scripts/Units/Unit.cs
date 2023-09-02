@@ -21,6 +21,11 @@ public class Unit : MonoBehaviour
     public SpriteRenderer wpnRenderer;
     public SpriteRenderer hatRenderer;
     public SpriteRenderer highlight;
+    public GameObject ui;
+    public Vector3 wpnPos;
+    public Vector3 hatPos;
+    public Vector3 highlightPos;
+    public Vector3 uiPos;
 
     [Header("Items")]
 
@@ -362,12 +367,17 @@ public class Unit : MonoBehaviour
         if (wpn != null)
         {
             wpnRenderer.sprite = wpn.spr;
+            wpnRenderer.transform.localPosition = wpnPos;
         }
 
         if (hat != null)
         {
             hatRenderer.sprite = hat.spr;
+            hatRenderer.transform.localPosition = hatPos;
         }
+
+        ui.transform.localPosition = uiPos;
+        highlight.transform.localPosition = highlightPos;
         
     }
 
